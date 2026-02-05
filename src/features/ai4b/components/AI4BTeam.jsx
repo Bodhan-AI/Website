@@ -1,6 +1,6 @@
 import React from 'react';
 import { Linkedin } from 'lucide-react';
-import miteshImg from '../../../assets/mitesh-sir.avif';
+import miteshImg from '../../../assets/mitesh-sir.png';
 import pratyushImg from '../../../assets/pratyush-sir.avif';
 import anoopImg from '../../../assets/anoop-sir.avif';
 import vivekImg from '../../../assets/vivek-sir.avif';

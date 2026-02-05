@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from "motion/react";
 import { Menu, X } from 'lucide-react';
 
-import bodhanLogo from '../../../assets/bodhan-logo.avif';
 import Icon from '../../../assets/Icon.png';
 import LogoWithIcon from '../../../assets/Logo-with-icon.png';
 

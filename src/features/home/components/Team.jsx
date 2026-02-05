@@ -3,7 +3,7 @@ import { Linkedin } from 'lucide-react';
 import Container from './Container';
 import SectionHeading from './SectionHeading';
 import Card from './Card';
-import miteshImg from '../../../assets/mitesh-sir.avif';
+import miteshImg from '../../../assets/mitesh-sir.png';
 import balaramanImg from '../../../assets/Balaraman Ravindran.jpg';
 import karthikRamanImg from '../../../assets/Karthik Raman.jpg';
 import nandanImg from '../../../assets/Nandan Sudarsanam.jpg';
