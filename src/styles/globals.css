@@ -18,11 +18,13 @@
   --brand-blue: #314685;
   --brand-orange: #FF6600;
   --brand-red: #EA2027;
+  --brand-bg-gradient: #e0a23e;
   --white: #FFFFFF;
   --color-5: #25282B;
   --background-light: #F8F6F1;
   --papaya-white: #FAEACD;
   --selective-yellow: #FAAF01;
+  --selective-yellow2: #fbd47a;
   --color-9: #0A0A0A;
   --color-10: #525252;
   --color-11: #737373;
@@ -65,6 +67,7 @@
 @theme {
   --font-syne: "Syne", sans-serif;
 }
+
 /* Utility Classes */
 .transition-spring {
   transition-property: all;
@@ -118,9 +121,46 @@
   text-underline-offset: 2px;
 }
 
+
+
 body {
   margin: 0;
   display: block;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.cta-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-100);
+  background-image:
+    radial-gradient(circle at 50% 0%, var(--selective-yellow2) 0%, transparent 60%),
+    linear-gradient(120deg, #dba492,#f8aa7d,#dba492,#f8aa7d);
+  background-size: 100% 100%, 200% 200%;
+  background-position: 50% 0%, 0% 50%;
+  background-blend-mode: overlay, normal;
+  animation: gradient-flow 5s ease infinite;
+}
+
+@keyframes gradient-flow {
+  0%   { background-position: 50% 0%, 0% 50%; }
+  50%  { background-position: 50% 100%, 100% 50%; }
+  100% { background-position: 50% 0%, 0% 50%; }
+}
+.cta-noise {
+  position: absolute;
+  inset: -50%; 
+  pointer-events: none;
+  background-image: url("/assets/noise.png");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  opacity: 0.22;
+  mix-blend-mode: soft-light;
+  animation: noise-move 12s steps(10) infinite;
+}
+
+@keyframes noise-move {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-10%, -10%); }
 }

@@ -57,17 +57,24 @@ const Navbar = () => {
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">
                     <motion.div variants={linkVariants}>
-                        <Link to="/" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Homepage</Link>
+                        <Link to="/" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Home</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
                         <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team & Sponsors</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/research" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</Link>
+                        <a
+                            href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium"
+                        >
+                            Research
+                        </a>
                     </motion.div>
+
                 </div>
 
-                {/* Tablet: Logo + Prologue Text (Left aligned implicitly by justify-start, but let's ensure spacing) */}
                 {/* Mobile: Logo Center (justify-center) */}
                 <motion.div
                     className={`flex flex-shrink-0 items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2`}
@@ -115,7 +122,16 @@ const Navbar = () => {
             >
                 <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
                     <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Homepage</Link>
-                    <Link to="/research" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</Link>
+                    <a
+                        href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Research
+                    </a>
+
                     <Link to="/#about" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>About Us</Link>
                     <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>People</Link>
                     <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Advisory Board</Link>
