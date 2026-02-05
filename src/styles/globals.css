@@ -62,6 +62,9 @@
   --btn-join: #F94500;
 }
 
+@theme {
+  --font-syne: "Syne", sans-serif;
+}
 /* Utility Classes */
 .transition-spring {
   transition-property: all;
