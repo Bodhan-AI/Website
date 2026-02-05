@@ -34,7 +34,7 @@ const HeroSection = () => {
 
         {/* Heading - "bodhan" & "ai": Spring, time 3s, bounce 0.2s, delay 0.6s
                      ".": Bezier, time 1.1s, delay 1.5s */}
-        <h1 className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-semibold text-[var(--color-9)] tracking-tight mb-2 flex items-center justify-center">
+        <h1 className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-syne font-400 text-[var(--color-9)] tracking-tight mb-2 flex items-center justify-center">
           <Motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

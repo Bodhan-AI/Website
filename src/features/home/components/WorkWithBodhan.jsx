@@ -4,7 +4,7 @@ import CTAButton from './CTAButton';
 
 const WorkWithBodhan = () => {
     return (
-        <Container className="py-24">
+        <Container className="py-24 scroll-mt-32" id="careers">
             <div className="w-full rounded-[3rem] bg-gradient-to-br from-[var(--bg-gradient-start)] via-[var(--bg-gradient-mid)] to-[var(--bg-gradient-end)] animate-gradient p-12 md:p-24 text-center shadow-xl relative overflow-hidden">
                 {/* Override heading for exact visual fidelity of this section */}
                 <div className="absolute top-0 left-0 w-full h-full z-0"></div> {/* Placeholder for structure */}

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import HeroSection from './HeroSection';
 import Navbar from './Navbar';
 import NarrativeSection from './NarrativeSection';
@@ -13,6 +14,21 @@ import AboutUs from './AboutUs';
 import Team from './Team';
 
 const HomePage = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [location]);
+
     return (
         <>
             <Navbar />
