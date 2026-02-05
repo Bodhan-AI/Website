@@ -15,13 +15,12 @@ const AboutUs = () => {
 
             <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed bg-white/50 p-8 rounded-3xl border border-white/60 shadow-sm backdrop-blur-sm">
                 <p className="mb-6">
-                    This section will contain detailed information about what will be created through Bodhan.
-                    Our mission is to democratize access to quality education through cutting-edge AI technology,
-                    creating a personalized learning ecosystem for every student in India.
+                   Bodhan AI is the Center of Excellence (CoE) in Artificial Intelligence for Education, incubated by IIT Madras as a Section 8 Company. 
+                    It is rooted in the vision of the National Education Policy 2020, which identifies AI as a key driver of personalized, inclusive learning and future‑ready skills. Bodhan in Sanskrit means “Awakening” / “Enlightenment.”
                 </p>
                 <p>
-                    From intelligent tutoring systems to productivity tools for educators, Bodhan aims to
-                    bridge the gap between traditional schooling and the future of learning.
+                    Anchored by dedicated funding in the Union Budget 2025‑26, it stands as a flagship initiative in India’s AI‑driven education and skilling roadmap.
+                    Framed within the national ambition of “Make AI in India, Make AI Work for India,” Bodhan AI is conceived as critical AI infrastructure for transforming how India learns, teaches, and builds talent at scale.
                 </p>
             </div>
         </Container>

@@ -19,19 +19,19 @@ const WhatWeBuild = () => {
                 {[
                     {
                         title: "Personalised Learning for Students",
-                        description: "Adaptive learning systems that respond to each learner's pace, performance, and context. AI-driven feedback, recommendations, and remedial pathways help close learning gaps in real time, at scale."
+                        description: "Development of adaptive learning platforms that tailor content, pacing, and difficulty to each learner’s profile, performance, and context. Use of AI to bridge learning gaps through real‑time feedback, recommendations, and remedial pathways."
                     },
                     {
                         title: "Productivity Tools for Teachers",
-                        description: "AI-enabled assessment, diagnostics, and analytics that reduce administrative burden and surface meaningful insights. Teachers gain clarity on learner progress, risks, and interventions without losing agency."
+                        description: "Assessment and analytics AI‑driven assessment tools for automated grading, formative assessment, and diagnostic testing at scale. Learning analytics for teachers, institutions, and policymakers to track outcomes, identify at‑risk learners, and optimize interventions."
                     },
                     {
                         title: "Curriculum and Content Systems",
-                        description: "AI-assisted creation and curation of question banks, micro-content, simulations, and multilingual learning materials. Curriculum design support that embeds AI literacy and aligns with evolving industry needs."
+                        description: "Smart content generation and curation, including AI‑assisted creation of question banks, micro‑content, simulations, and multilingual materials in line with NEP 2020. Support for curriculum design that embeds AI literacy and high‑tech skills, aligned with emerging industry needs."
                     },
                     {
                         title: "Virtual Learning Environments",
-                        description: "Intelligent tutoring systems and AI-powered classroom tools that augment, not replace, educators. Seamless integration with India's digital public infrastructure and the broader EdTech ecosystem."
+                        description: "Virtual learning environments, intelligent tutoring systems, and AI‑powered classroom tools that augment teachers rather than replace them. Integration with broader digital public infrastructure and EdTech ecosystems to ensure interoperability and reach."
                     }
                 ].map((item, index) => (
                     <Card key={index} title={item.title} description={item.description} />

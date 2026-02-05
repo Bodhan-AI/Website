@@ -11,14 +11,14 @@ const Card = ({ title, description, className = "" }) => {
             </div>
 
             {/* White Text Panel - Glossy by default, Solid on Hover */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/60 backdrop-blur-md border border-white/50 group-hover:bg-white group-hover:backdrop-blur-none group-hover:border-transparent rounded-2xl p-6 shadow-sm transition-all duration-300 ease-out">
+            <div className="absolute bottom-4 left-4 right-4 bg-white/60 backdrop-blur-md border border-white/50 group-hover:bg-white group-hover:backdrop-blur-none group-hover:border-transparent rounded-2xl p-6 shadow-sm transition-all duration-300 ease-out max-h-[calc(100%-2rem)] overflow-hidden flex flex-col">
                 <h3 className="text-xl font-medium text-gray-900 mb-0 leading-tight">
                     {title}
                 </h3>
 
                 {/* Expandable Description */}
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden group-hover:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                         <p className="text-gray-600 text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed">
                             {description}
                         </p>
