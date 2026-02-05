@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+
+  --brand-blue: #314685;
+  --brand-orange: #FF6600;
+  --brand-red: #EA2027;
+  --white: #FFFFFF;
+  --color-5: #25282B;
+  --background-light: #F8F6F1;
+  --papaya-white: #FAEACD;
+  --selective-yellow: #FAAF01;
+  --color-9: #0A0A0A;
+  --color-10: #525252;
+  --color-11: #737373;
+  /* --color-12 is white */
+  --black: #000000;
+  --color-14: #A1A1A1;
+  --color-15: #262626;
+  --color-16: #0F0F0F;
+  --primary-500: #FF6207;
+  --primary-700: #CE3000;
+  --primary-100: #FFEAD2;
+  --color-20: #171717;
+  --light-94: #F1F0EE;
+  --dark-7: #111111;
+  --dark-12: #1E1E1E;
+  --grey-30: #4C4C4C;
+  /* --color-25 is white */
+  /* --color-26 is white */
+  --off-black: #101010;
+  /* New Navbar Colors */
+  --navbar-bg: #F7F6F0;
+  --text-primary: #2E3238;
+  --text-hover: #FA5C40;
+
+  /* Narrative Section Colors */
+  --bg-black-900: #050505;
+  --text-orange-500: #FF6B35;
+  --text-orange-400: #FFB347;
+
+  /* Standardized Colors */
+  --bg-cream-50: #FFF9F0;
+  --bg-cream-100: #FFF4E6;
+  --bg-orange-100: #FFDAC1;
+  --bg-gradient-start: #F2EFE9;
+  --bg-gradient-mid: #FFEAD2;
+  --bg-gradient-end: #FFD4B2;
+  --btn-join: #F94500;
+}
+
+/* Utility Classes */
+.transition-spring {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 300ms;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-flow 6s ease infinite;
+}
+
+/* Link Styles */
+
+/* Type 1: Normal - Brand Blue, Hover - Brand Orange */
+.link-primary {
+  color: var(--brand-blue);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.link-primary:hover {
+  color: var(--brand-orange);
+}
+
+/* Type 2: Normal - White, Hover - Underline custom style */
+.link-white {
+  color: var(--white);
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+.link-white:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+}
