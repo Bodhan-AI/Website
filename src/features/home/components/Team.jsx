@@ -4,6 +4,12 @@ import Container from './Container';
 import SectionHeading from './SectionHeading';
 import Card from './Card';
 import miteshImg from '../../../assets/mitesh-sir.avif';
+import balaramanImg from '../../../assets/Balaraman Ravindran.jpg';
+import karthikRamanImg from '../../../assets/Karthik Raman.jpg';
+import nandanImg from '../../../assets/Nandan Sudarsanam.jpg';
+import neethiImg from '../../../assets/S Neethi.jpg';
+import vishwanathImg from '../../../assets/Vishwanath Mallikarjunan.jpg';
+
 import jeffImg from '../../../assets/Jeff Ullman.jpg';
 import svethaImg from '../../../assets/svetha.jpeg';
 import ashokImg from '../../../assets/Ashok Goel.png';
@@ -63,31 +69,31 @@ const Team = () => {
                             name: "Prof. Balaraman Ravindran",
                             role: "Professor IIT Madras",
                             linkedin: "https://www.linkedin.com/in/balaraman-ravindran-427a307/",
-                            image: null
+                            image: balaramanImg
                         },
                         {
                             name: "Prof. Karthik Raman",
                             role: "Professor IIT Madras",
                             linkedin: "https://www.linkedin.com/in/ramankarthik/",
-                            image: null
+                            image: karthikRamanImg
                         },
                         {
                             name: "Prof. Nandan Sudarsanam",
                             role: "Associate Professor IIT Madras",
                             linkedin: "https://www.linkedin.com/in/nandan-sudarsanam-67359b6/",
-                            image: null
+                            image: nandanImg
                         },
                         {
                             name: "Dr. S Neethi",
                             role: "Adjunct Faculty IIT Madras",
                             linkedin: "https://www.linkedin.com/in/s-neethi/",
-                            image: null
+                            image: neethiImg
                         },
                         {
                             name: "Mr. Vishwanath Mallikarjunan",
                             role: "Lead",
                             linkedin: "https://www.linkedin.com/in/vishwanathmallikarjunan/",
-                            image: null
+                            image: vishwanathImg
                         },
                         {
                             name: "Mr. Karthik Mahadevan Mohanakrishnan",
