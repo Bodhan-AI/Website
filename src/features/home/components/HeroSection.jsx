@@ -68,9 +68,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-syne font-400 text-[#0a0a0a] tracking-tight mb-2"
+          className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-400 text-[#0a0a0a] tracking-tight mb-2"
         >
-          bodhan<span className="text-[#ff6207]">.</span><span className="text-[#ff6207]">ai</span>
+          Bodhan<span className="text-[#ff6207]">.</span><span className="text-[#ff6207]">AI</span>
         </Motion.h1>
 
         <Motion.p
