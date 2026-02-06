@@ -1,23 +1,28 @@
 import React from 'react';
 import Container from './Container';
-import CTAButton from './CTAButton';
 
 const WorkWithBodhan = () => {
     return (
-        <Container className="py-24 scroll-mt-32" id="careers">
-            <div className="w-full rounded-[3rem] p-12 md:p-24 text-center shadow-xl relative overflow-hidden bg-[var(--primary-100)]">
+        <Container className="py-16 scroll-mt-32" id="careers">
+            <div className="w-full rounded-[3rem] p-8 md:p-24 text-center shadow-xl relative overflow-hidden">
 
                 {/* Background layers */}
                 <div className="absolute inset-0 z-0">
                     <div className="cta-bg-gradient"></div>
+                    <div className="cta-blur-rotate-1">
+                        <div className="cta-conic-1"></div>
+                    </div>
+                    <div className="cta-blur-rotate-2">
+                        <div className="cta-conic-2"></div>
+                    </div>
                     <div className="cta-noise"></div>
                 </div>
 
 
-                <h2 className="text-5xl md:text-6xl font-syne font-semibold mb-8 relative z-10 text-gray-900">
-                    Work with <span className="text-[var(--text-orange-500)]">Bodhan</span>
-                </h2>
-                <p className="max-w-3xl mx-auto text-base md:text-lg font-inter font-medium mb-12 leading-relaxed relative z-10 text-gray-800">
+                <h1 className="text-6xl font-syne font-medium mb-8 relative z-10 text-black leading-tight tracking-tight">
+                    Work with <span className="text-[var(--primary-500)]">Bodhan</span>
+                </h1>
+                <p className="max-w-2xl mx-auto text-l font-medium mb-12 leading-relaxed relative z-10 text-[var(--color-15)] tracking-tight">
                     Bodhan collaborates with governments, institutions, researchers, and practitioners committed to strengthening education through responsible AI. If you would like to engage, collaborate, or join the team, we would like to hear from you.
                 </p>
 
