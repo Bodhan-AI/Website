@@ -25,6 +25,7 @@
   --papaya-white: #FAEACD;
   --selective-yellow: #FAAF01;
   --selective-yellow2: #fbd47a;
+  --brand-gold: #ffd95b;
   --color-9: #0A0A0A;
   --color-10: #525252;
   --color-11: #737373;
@@ -129,6 +130,7 @@ body {
   display: block;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .cta-bg-gradient {
