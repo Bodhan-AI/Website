@@ -8,8 +8,8 @@ const Footer = () => {
                 {/* Top Section: Logo and Social Icons */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                     {/* Left: Logo */}
-                    <div className="text-2xl font-syne font-400 text-gray-900 mb-6 md:mb-0">
-                        Bodhan<span className="text-[var(--text-orange-500)]">.Ai</span>
+                    <div className="text-2xl font-400 text-gray-900 mb-6 md:mb-0">
+                        Bodhan<span className="text-[var(--text-orange-500)]">.AI</span>
                     </div>
 
                     {/* Right: Social Icons */}
