@@ -62,14 +62,7 @@ const Navbar = () => {
                         <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team & Sponsors</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <a
-                            href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium"
-                        >
-                            Research
-                        </a>
+                        <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</Link>
                     </motion.div>
 
                 </div>
@@ -83,14 +76,14 @@ const Navbar = () => {
                         {/* Mobile: Only Icon */}
                         <img src={Icon} alt="Bodhan Icon" className="h-14 w-auto object-contain md:hidden" />
                         {/* Tablet/Desktop: Logo with Icon */}
-                        <img src={Icon} alt="Bodhan Logo" className="h-14 w-auto object-contain hidden md:block" />
+                        <img src={Icon} alt="Bodhan Logo" className="h-18 w-auto object-contain hidden md:block" />
                     </div>
                 </motion.div>
 
                 {/* Desktop Right Links */}
                 <div className="hidden lg:flex space-x-12">
                     <motion.div variants={linkVariants}>
-                        <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">International Advisory Board</Link>
+                        <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Advisory Board</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
                         <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Careers</Link>
@@ -121,15 +114,7 @@ const Navbar = () => {
             >
                 <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
                     <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Homepage</Link>
-                    <a
-                        href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors"
-                        onClick={() => setIsOpen(false)}
-                    >
-                        Research
-                    </a>
+                    <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</Link>
 
                     <Link to="/#about" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>About Us</Link>
                     <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>People</Link>

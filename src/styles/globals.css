@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Poppins, system-ui, Arial, sans-serif;
+  font-family: Poppins, sans-serif, system-ui;
   line-height: 1.5;
   font-weight: 400;
 
@@ -68,6 +68,20 @@
 @theme {
   --font-syne: "Syne", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.h1 {
+  font-family: var(--font-poppins);
+  font-weight: 700;
+}
+
+h2 {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+h3 {
+  font-family: var(--font-poppins);
 }
 
 /* Utility Classes */
@@ -130,7 +144,6 @@ body {
   display: block;
   min-width: 320px;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .cta-bg-gradient {
@@ -139,7 +152,7 @@ body {
   background-color: var(--primary-100);
   background-image:
     radial-gradient(circle at 50% 0%, var(--selective-yellow2) 0%, transparent 60%),
-    linear-gradient(120deg, #dba492,#f8aa7d,#dba492,#f8aa7d);
+    linear-gradient(120deg, #dba492, #f8aa7d, #dba492, #f8aa7d);
   background-size: 100% 100%, 200% 200%;
   background-position: 50% 0%, 0% 50%;
   background-blend-mode: overlay, normal;
@@ -151,9 +164,10 @@ body {
   50%  { background-position: 50% 100%, 100% 50%; }
   100% { background-position: 50% 0%, 0% 50%; }
 }
+
 .cta-noise {
   position: absolute;
-  inset: -50%; 
+  inset: -50%;
   pointer-events: none;
   background-image: url("/assets/noise.png");
   background-repeat: repeat;

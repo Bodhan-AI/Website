@@ -22,7 +22,13 @@ const WorkWithBodhan = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-                    <CTAButton variant="primary" className="hover:opacity-80 transition-opacity">
+                    <CTAButton
+                        variant="primary"
+                        className="hover:opacity-80 transition-opacity"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeAukx8zOMY18rp_a2B7TNMbKWR6BKV3pWSWt3aXpAfDHBRlw/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Contact Us
                     </CTAButton>
                     <CTAButton

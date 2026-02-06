@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                     {/* Left: Logo */}
                     <div className="text-2xl font-syne font-400 text-gray-900 mb-6 md:mb-0">
-                        bodhan<span className="text-[var(--text-orange-500)]">.ai</span>
+                        Bodhan<span className="text-[var(--text-orange-500)]">.Ai</span>
                     </div>
 
                     {/* Right: Social Icons */}

@@ -35,7 +35,7 @@ const SectionHeading = ({ title, highlightWord, subtitle, className = "", titleC
                 style={{ y }}
                 className={`text-center ${className}`}
             >
-                <h2 className={`text-5xl md:text-6xl font-syne font-semibold mb-6 tracking-tight ${titleClassName}`}>
+                <h2 className={`text-5xl md:text-6xl font-semibold mb-6 tracking-tight ${titleClassName}`}>
                     {renderTitle()}
                 </h2>
                 {subtitle && (
@@ -49,7 +49,7 @@ const SectionHeading = ({ title, highlightWord, subtitle, className = "", titleC
 
     return (
         <div className={`text-center ${className}`}>
-            <h2 className={`text-5xl md:text-6xl font-syne font-semibold mb-6 tracking-tight ${titleClassName}`}>
+            <h2 className={`text-5xl md:text-6xl font-semibold mb-6 tracking-tight ${titleClassName}`}>
                 {renderTitle()}
             </h2>
             {subtitle && (

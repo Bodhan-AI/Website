@@ -98,11 +98,8 @@ const PublicInfrastructure = () => {
                 parallax={true}
             />
 
-            {/* 🟢 TABLET STAGE */}
-            <div className="max-w-5xl mx-auto relative px-4 sm:px-6 md:px-0">
+            {/* <div className="max-w-5xl mx-auto relative px-4 sm:px-6 md:px-0">
 
-
-                {/* 🟡 SCREEN CONTENT */}
                 <div className="bg-[var(--bg-cream-100)] rounded-[2rem] p-8 md:p-12">
 
                     <motion.div
@@ -113,7 +110,6 @@ const PublicInfrastructure = () => {
                         viewport={{ once: true, amount: 0.2 }}
                     >
 
-                        {/* Feature 1 */}
                         <motion.div
                             className="bg-white p-8 rounded-3xl flex flex-col sm:flex-row items-center text-left gap-6"
                             variants={revealTopLeft}
@@ -129,7 +125,6 @@ const PublicInfrastructure = () => {
                             </div>
                         </motion.div>
 
-                        {/* Feature 2 */}
                         <motion.div
                             className="bg-white p-8 rounded-3xl flex flex-col sm:flex-row items-center text-left gap-6"
                             variants={revealBottomLeft}
@@ -145,7 +140,6 @@ const PublicInfrastructure = () => {
                             </div>
                         </motion.div>
 
-                        {/* Feature 3 */}
                         <motion.div
                             className="bg-white p-8 rounded-3xl flex flex-col justify-between text-left md:col-start-2 md:row-start-1 md:row-span-2 h-full"
                             variants={revealRightBig}
@@ -165,14 +159,13 @@ const PublicInfrastructure = () => {
                     </motion.div>
                 </div>
 
-                {/* 🔵 TABLET PNG OVERLAY */}
                 <img
                     src={border}
                     alt="tablet frame"
                     className="pointer-events-none absolute inset-0 w-full h-full object-fill scale-[1.08] z-20"
                 />
 
-            </div>
+            </div> */}
         </div>
     );
 };

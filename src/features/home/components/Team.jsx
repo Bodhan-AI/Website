@@ -9,7 +9,9 @@ import karthikRamanImg from '../../../assets/Karthik Raman.jpg';
 import nandanImg from '../../../assets/Nandan Sudarsanam.jpg';
 import neethiImg from '../../../assets/S Neethi.jpg';
 import vishwanathImg from '../../../assets/Vishwanath Mallikarjunan.jpg';
-
+import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
+import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
+import manuImg from '../../../assets/prof-manu.jpg';
 import jeffImg from '../../../assets/Jeff Ullman.jpg';
 import svethaImg from '../../../assets/svetha.jpeg';
 import ashokImg from '../../../assets/Ashok Goel.png';
@@ -44,18 +46,33 @@ const Team = () => {
         }
     ];
 
+    const boardMembers = [
+        {
+            name: "Prof. Balaraman Ravindran",
+            role: "Professor IIT Madras",
+            details: "",
+            image: balaramanImg
+        },
+        {
+            name: "Prof. Manu Santhanam",
+            role: "Board Member",
+            details: "",
+            image: manuImg
+        },
+        {
+            name: "Prof. Veezhinathan Kamakoti",
+            role: "Board Member",
+            details: "",
+            image: VeezhinathanImg
+        },
+    ];
+
     const teamMembers = [
         {
             name: "Prof. Mitesh Khapra",
             role: "Associate Professor IIT Madras",
             linkedin: "https://www.linkedin.com/in/mitesh-khapra-3bb3032/",
             image: miteshImg
-        },
-        {
-            name: "Prof. Balaraman Ravindran",
-            role: "Professor IIT Madras",
-            linkedin: "https://www.linkedin.com/in/balaraman-ravindran-427a307/",
-            image: balaramanImg
         },
         {
             name: "Prof. Karthik Raman",
@@ -85,23 +102,55 @@ const Team = () => {
             name: "Mr. Karthik Mahadevan Mohanakrishnan",
             role: "Lead",
             linkedin: "https://www.linkedin.com/in/karthikmaha/",
-            image: null
+            image: karthikMahaImg
         }
     ];
 
     return (
-        <Container className="pt-20 pb-24 scroll-mt-32" id="team">
+        <Container className="pt-20 pb-10 scroll-mt-32" id="team">
             <SectionHeading
                 title="Our People"
                 highlightWord="People"
                 subtitle="The team driving the Bodhan mission forward."
-                className="mb-8 font-syne"
+                className="mb-8"
                 parallax={true}
             />
 
+            {/* Advisory Board Section */}
+            <div id="advisory" className="mb-24 scroll-mt-32">
+                <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">Advisory Board</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {advisoryBoard.map((member, index) => (
+                        <Card
+                            key={index}
+                            title={member.name}
+                            description={`${member.role} — ${member.details} `}
+                            image={member.image}
+                            className="max-w-sm mx-auto w-full md:max-w-none"
+                        />
+                    ))}
+                </div>
+            </div>
+
+            {/* Board Members Section */}
+            <div id="board" className="mb-24 scroll-mt-32">
+                <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">Board Members</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {boardMembers.map((member, index) => (
+                        <Card
+                            key={index}
+                            title={member.name}
+                            description={member.details ? `${member.role} — ${member.details}` : member.role}
+                            image={member.image}
+                            className="max-w-sm mx-auto w-full md:max-w-none"
+                        />
+                    ))}
+                </div>
+            </div>
+
             {/* Leadership / Org Chart Section */}
-            <div className="mb-24">
-                <h3 className="text-3xl font-inter font-semibold text-center mb-12 text-[#1A1A1A]">Leadership & Implementation Team</h3>
+            <div className="mb-10">
+                <h3 className="text-3xl font-inter font-semibold text-center mb-12 text-[#1A1A1A]">Leadership</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {teamMembers.map((member, index) => (
@@ -136,21 +185,6 @@ const Team = () => {
                                 LinkedIn
                             </a>
                         </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Advisory Board Section */}
-            <div id="advisory" className="scroll-mt-32">
-                <h3 className="text-3xl font-syne font-bold text-center mb-12 text-[#1A1A1A]">Advisory Board</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {advisoryBoard.map((member, index) => (
-                        <Card
-                            key={index}
-                            title={member.name}
-                            description={`${member.role} — ${member.details} `}
-                            image={member.image}
-                        />
                     ))}
                 </div>
             </div>

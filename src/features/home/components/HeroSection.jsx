@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from "motion/react";
+import { Link } from 'react-router-dom';
 
 
 const HeroSection = () => {
@@ -34,7 +35,7 @@ const HeroSection = () => {
 
         {/* Heading - "bodhan" & "ai": Spring, time 3s, bounce 0.2s, delay 0.6s
                      ".": Bezier, time 1.1s, delay 1.5s */}
-        <h1 className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-syne font-400 text-[var(--color-9)] tracking-tight mb-2 flex items-center justify-center">
+        <h1 className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-syne font-normal text-[var(--color-9)] tracking-tight mb-2 flex items-center justify-center">
           <Motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -45,7 +46,7 @@ const HeroSection = () => {
               delay: 0.6
             }}
           >
-            bodhan
+            Bodhan
           </Motion.span>
           <Motion.span
             initial={{ opacity: 0, scale: 0 }}
@@ -70,7 +71,7 @@ const HeroSection = () => {
             }}
             className="text-orange-500"
           >
-            ai
+            Ai
           </Motion.span>
         </h1>
 
@@ -90,9 +91,11 @@ const HeroSection = () => {
             Centre of Excellence in AI for Education
           </p>
 
-          <button className="bg-[var(--color-20)] text-white text-sm md:text-base font-medium py-2.5 px-6 md:py-3 md:px-8 rounded-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            Explore with Us
-          </button>
+          <a href="#narrative" className="no-underline">
+            <button className="bg-[var(--color-20)] text-white text-sm md:text-base font-medium py-2.5 px-6 md:py-3 md:px-8 rounded-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              Explore with Us
+            </button>
+          </a>
         </Motion.div>
 
       </div>
