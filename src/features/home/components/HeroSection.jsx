@@ -86,7 +86,7 @@ const HeroSection = () => {
           }}
           className="flex flex-col items-center"
         >
-          <p className="text-[var(--color-11)] text-xs md:text-sm lg:text-base tracking-[0.2em] uppercase font-medium mb-8 md:mb-12 text-center max-w-[90%] md:max-w-none">
+          <p className="text-[var(--color-11)] text-xs md:text-sm lg:text-base tracking-[0.2em] uppercase font-inter font-medium mb-8 md:mb-12 text-center max-w-[90%] md:max-w-none">
             Centre of Excellence in AI for Education
           </p>
 

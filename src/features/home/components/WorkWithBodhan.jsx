@@ -14,10 +14,10 @@ const WorkWithBodhan = () => {
                 </div>
 
 
-                <h2 className="text-5xl md:text-6xl font-semibold mb-8 relative z-10 text-gray-900">
+                <h2 className="text-5xl md:text-6xl font-syne font-semibold mb-8 relative z-10 text-gray-900">
                     Work with <span className="text-[var(--text-orange-500)]">Bodhan</span>
                 </h2>
-                <p className="max-w-3xl mx-auto text-base md:text-lg font-medium mb-12 leading-relaxed relative z-10 text-gray-800">
+                <p className="max-w-3xl mx-auto text-base md:text-lg font-inter font-medium mb-12 leading-relaxed relative z-10 text-gray-800">
                     Bodhan collaborates with governments, institutions, researchers, and practitioners committed to strengthening education through responsible AI. If you would like to engage, collaborate, or join the team, we would like to hear from you.
                 </p>
 

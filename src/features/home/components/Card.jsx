@@ -24,14 +24,14 @@ const Card = ({ title, description, image, className = "" }) => {
                     ? 'bg-black/30 border-white/20 text-white group-hover:bg-white group-hover:backdrop-blur-none group-hover:border-transparent group-hover:text-gray-900'
                     : 'bg-white/60 border-white/50 group-hover:bg-white group-hover:backdrop-blur-none group-hover:border-transparent'
                 }`}>
-                <h3 className={`text-xl font-medium mb-0 leading-tight ${image ? 'text-white group-hover:text-gray-900' : 'text-gray-900'}`}>
+                <h3 className={`text-xl font-syne font-medium mb-0 leading-tight ${image ? 'text-white group-hover:text-gray-900' : 'text-gray-900'}`}>
                     {title}
                 </h3>
 
                 {/* Expandable Description */}
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
                     <div className="overflow-hidden group-hover:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                        <p className={`text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed ${image ? 'text-gray-600' : 'text-gray-600'}`}>
+                        <p className={`text-sm font-inter mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed ${image ? 'text-gray-600' : 'text-gray-600'}`}>
                             {description}
                         </p>
                     </div>

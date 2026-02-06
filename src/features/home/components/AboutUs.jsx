@@ -9,7 +9,7 @@ const AboutUs = () => {
                 title="About Us"
                 highlightWord="Us"
                 subtitle="Bodhan is an AI-first initiative to enable the next generation of learners."
-                className="mb-12"
+                className="mt-10"
                 parallax={true}
             />
 

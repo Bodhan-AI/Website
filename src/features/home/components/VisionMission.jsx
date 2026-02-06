@@ -8,8 +8,8 @@ const VisionMission = () => {
             {/* Vision Block */}
             <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-40 relative z-10">
                 <div className="text-left">
-                    <h2 className="text-4xl md:text-5xl font-semibold text-[var(--text-orange-400)] mb-8">Vision</h2>
-                    <p className="text-white text-xl md:text-2xl font-normal leading-normal">
+                    <h2 className="text-4xl md:text-5xl font-syne font-semibold text-[var(--text-orange-400)] mb-8">Vision</h2>
+                    <p className="text-white text-xl md:text-2xl font-inter font-normal leading-normal">
                         Our vision is to build a future where every child learns to read, write, count, and thrive with confidence, and every citizen (young or adult) is equipped to participate meaningfully in an AI-driven world.
                     </p>
                 </div>
@@ -26,15 +26,15 @@ const VisionMission = () => {
                     <img src={bodhanMission} alt="Bodhan Mission" className="w-full h-full object-cover" />
                 </div>
                 <div className="text-left order-1 lg:order-2">
-                    <h2 className="text-4xl md:text-5xl font-semibold text-[var(--text-orange-400)] mb-8">Mission</h2>
-                    <p className="text-white text-xl md:text-2xl font-normal leading-normal">
+                    <h2 className="text-4xl md:text-5xl font-syne font-semibold text-[var(--text-orange-400)] mb-8">Mission</h2>
+                    <p className="text-white text-xl md:text-2xl font-inter font-normal leading-normal">
                         Deploy responsible, inclusive, sovereign AI tools to transform how India learns, teaches, assesses, translates, and receives guidance across every language and every district.
                     </p>
                 </div>
             </div>
             <div>
                 {/* Decorative Gradient Overlay */}
-                <p className="text-center text-white/80 mt-12 text-2xl w-4/5 mx-auto leading-relaxed">
+                <p className="text-center text-white/80 mt-12 font-inter text-2xl w-4/5 mx-auto leading-relaxed">
                     This is not merely a technology initiative. It is a systemic transformation of how Bharat learns, teaches, evaluates, and builds digital capacity, fully aligned with NEP 2020 and the aspirations of Viksit Bharat @ 2047.
                 </p>
             </div>

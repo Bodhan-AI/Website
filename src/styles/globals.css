@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, system-ui, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -66,6 +66,7 @@
 
 @theme {
   --font-syne: "Syne", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 /* Utility Classes */

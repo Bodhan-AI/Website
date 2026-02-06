@@ -9,24 +9,24 @@ const NarrativeSection = () => {
 
             <div className="max-w-5xl mx-auto flex flex-col items-center text-center z-10 relative p-10">
                 {/* Headline */}
-                <h2 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-12">
+                <h2 className="text-5xl md:text-6xl font-syne font-semibold leading-tight tracking-tight mb-8">
                     Awakening how India
                     <br className="hidden md:block" />
                     <span className="text-[var(--text-orange-500)]"> learns</span>, <span className="text-[var(--text-orange-500)]">teaches</span>, and <span className="text-[var(--text-orange-500)]">grows</span>
                 </h2>
 
                 {/* Paragraph 1 */}
-                <p className="text-[var(--color-14)] text-xl leading-relaxed mb-8 max-w-4xl">
+                <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-8 max-w-4xl">
                     Bodhan AI is India's Centre of Excellence for Artificial Intelligence in Education, building responsible and inclusive AI as public infrastructure. Incubated by IIT Madras and anchored in the National Education Policy 2020, Bodhan exists to strengthen learning outcomes at national scale, across learners, teachers, institutions, and systems.
                 </p>
 
                 {/* Paragraph 2 */}
-                <p className="text-[var(--color-14)] text-xl leading-relaxed mb-12 max-w-4xl">
+                <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-8 max-w-4xl">
                     India's education landscape is unlike any other. Millions of learners, hundreds of languages, and deeply varied social and regional contexts demand systems that can adapt without excluding, and scale without flattening diversity. Bodhan AI exists to build this missing capability, using artificial intelligence to support learning, assessment, translation, and guidance across every district and demographic.
                 </p>
 
                 {/* Tagline */}
-                <p className="text-[var(--color-14)] text-xl leading-relaxed mb-12 max-w-4xl">
+                <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-12 max-w-4xl">
                     This is not a product. It is a national capability.
                 </p>
             </div>

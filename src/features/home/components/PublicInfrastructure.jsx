@@ -11,15 +11,15 @@ const PublicInfrastructure = () => {
     const easeCinematic = [0.16, 1, 0.3, 1];
 
 
-   const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      delayChildren: 0.9,
-      staggerChildren: 0.65
-    }
-  }
-};
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                delayChildren: 0.9,
+                staggerChildren: 0.65
+            }
+        }
+    };
 
 
     const revealTopLeft = {
@@ -88,7 +88,7 @@ const PublicInfrastructure = () => {
     };
 
     return (
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 sm:py-32 text-center">
+        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 sm:py-32 text-center overflow-x-clip">
 
             <SectionHeading
                 title="Built as Public Infrastructure"
@@ -122,8 +122,8 @@ const PublicInfrastructure = () => {
                                 <img src={designIcon} alt="Interoperable" className="w-full h-full object-contain object-left" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-semibold mb-3">Interoperable by Design</h3>
-                                <p className="text-gray-600 leading-relaxed text-sm">
+                                <h3 className="text-2xl font-semibold font-syne mb-3">Interoperable by Design</h3>
+                                <p className="text-gray-600 font-inter leading-relaxed text-sm">
                                     Built to integrate seamlessly with existing education platforms, standards, and workflows.
                                 </p>
                             </div>
@@ -138,8 +138,8 @@ const PublicInfrastructure = () => {
                                 <img src={dataFirstIcon} alt="Data Sovereignty" className="w-full h-full object-contain object-left" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-semibold mb-3">Data Sovereignty First</h3>
-                                <p className="text-gray-600 leading-relaxed text-sm">
+                                <h3 className="text-2xl font-syne font-semibold mb-3">Data Sovereignty First</h3>
+                                <p className="text-gray-600 font-inter leading-relaxed text-sm">
                                     Respects national data policies, local governance, and institutional ownership while enabling secure, scalable intelligence.
                                 </p>
                             </div>
@@ -155,8 +155,8 @@ const PublicInfrastructure = () => {
                                 <img src={responsibleHumanImg} alt="Responsible AI" className="w-full h-full object-cover" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-semibold mb-3">Responsible and Human-Centred</h3>
-                                <p className="text-gray-600 leading-relaxed text-sm">
+                                <h3 className="text-2xl font-syne font-semibold mb-3">Responsible and Human-Centred</h3>
+                                <p className="text-gray-600 font-inter leading-relaxed text-sm">
                                     Designed for transparency, explainability, and trust, ensuring AI supports educators and learners without replacing judgment.
                                 </p>
                             </div>
