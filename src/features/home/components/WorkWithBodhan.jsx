@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import CTAButton from './CTAButton';
 
 const WorkWithBodhan = () => {
     return (
@@ -19,7 +20,7 @@ const WorkWithBodhan = () => {
                 </div>
 
 
-                <h1 className="text-6xl font-syne font-medium mb-8 relative z-10 text-black leading-tight tracking-tight">
+                <h1 className="text-6xl font-medium mb-8 relative z-10 text-black leading-tight tracking-tight">
                     Work with <span className="text-[var(--primary-500)]">Bodhan</span>
                 </h1>
                 <p className="max-w-2xl mx-auto text-l font-medium mb-12 leading-relaxed relative z-10 text-[var(--color-15)] tracking-tight">
