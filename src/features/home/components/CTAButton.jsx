@@ -9,9 +9,19 @@ const CTAButton = ({ children, variant = "primary", className = "", ...props }) 
         orange: "bg-[#FF6B35] text-white hover:bg-[#E55A2B]"
     };
 
+    const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
+
+    if (props.href) {
+        return (
+            <a className={combinedClassName} {...props}>
+                {children}
+            </a>
+        );
+    }
+
     return (
         <button
-            className={`${baseStyles} ${variants[variant]} ${className}`}
+            className={combinedClassName}
             {...props}
         >
             {children}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion as Motion, useScroll, useTransform } from "motion/react";
+import { Link } from 'react-router-dom';
 
 const ease = [0.25, 0.46, 0.45, 0.94];
 

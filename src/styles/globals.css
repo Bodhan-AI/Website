@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, sans-serif, system-ui;
   line-height: 1.5;
   font-weight: 400;
 
@@ -25,6 +25,7 @@
   --papaya-white: #FAEACD;
   --selective-yellow: #FAAF01;
   --selective-yellow2: #fbd47a;
+  --brand-gold: #ffd95b;
   --color-9: #0A0A0A;
   --color-10: #525252;
   --color-11: #737373;
@@ -66,6 +67,21 @@
 
 @theme {
   --font-syne: "Syne", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.h1 {
+  font-family: var(--font-poppins);
+  font-weight: 700;
+}
+
+h2 {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+h3 {
+  font-family: var(--font-poppins);
 }
 
 /* Utility Classes */
@@ -147,9 +163,10 @@ body {
   50%  { background-position: 50% 100%, 100% 50%; }
   100% { background-position: 50% 0%, 0% 50%; }
 }
+
 .cta-noise {
   position: absolute;
-  inset: -50%; 
+  inset: -50%;
   pointer-events: none;
   background-image: url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256");
   background-repeat: repeat;

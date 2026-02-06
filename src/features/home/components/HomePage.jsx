@@ -5,10 +5,10 @@ import Navbar from './Navbar';
 import NarrativeSection from './NarrativeSection';
 import VisionMission from './VisionMission';
 import WhatWeBuild from './WhatWeBuild';
-import PublicInfrastructure from './PublicInfrastructure';
+// import PublicInfrastructure from './PublicInfrastructure';
 import WorkWithBodhan from './WorkWithBodhan';
 import Footer from './Footer';
-import AboutUs from './AboutUs';
+// import AboutUs from './AboutUs';
 import Team from './Team';
 
 const HomePage = () => {
@@ -30,17 +30,19 @@ const HomePage = () => {
     return (
         <>
             <Navbar />
-            <HeroSection />
-            <NarrativeSection />
-            <VisionMission />
-            <div className="w-full bg-[var(--bg-cream-50)] text-[#1A1A1A] relative">
-                <AboutUs />
-                <WhatWeBuild />
-                <PublicInfrastructure />
-                <Team />
-                <WorkWithBodhan />
-            </div>
-            <Footer />
+            <main className="w-full relative overflow-x-clip">
+                <HeroSection />
+                <NarrativeSection />
+                <VisionMission />
+                <div className="w-full bg-[var(--bg-cream-50)] text-[#1A1A1A] relative">
+                    {/* <AboutUs /> */}
+                    <WhatWeBuild />
+                    {/* <PublicInfrastructure /> */}
+                    <Team />
+                    <WorkWithBodhan />
+                </div>
+                <Footer />
+            </main>
         </>
     );
 };

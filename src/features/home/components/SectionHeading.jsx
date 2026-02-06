@@ -39,7 +39,7 @@ const SectionHeading = ({ title, highlightWord, subtitle, className = "", titleC
                     {renderTitle()}
                 </h2>
                 {subtitle && (
-                    <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed mb-20">
+                    <p className="max-w-3xl mx-auto font-inter text-lg md:text-xl text-gray-600 leading-relaxed mb-4">
                         {subtitle}
                     </p>
                 )}
@@ -53,7 +53,7 @@ const SectionHeading = ({ title, highlightWord, subtitle, className = "", titleC
                 {renderTitle()}
             </h2>
             {subtitle && (
-                <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed mb-20">
+                <p className="max-w-3xl mx-auto font-inter text-lg md:text-xl text-gray-600 leading-relaxed mb-4">
                     {subtitle}
                 </p>
             )}

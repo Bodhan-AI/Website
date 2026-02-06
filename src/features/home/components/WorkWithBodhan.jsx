@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import CTAButton from './CTAButton';
 
 const WorkWithBodhan = () => {
     return (
@@ -19,7 +20,7 @@ const WorkWithBodhan = () => {
                 </div>
 
 
-                <h1 className="text-6xl font-syne font-medium mb-8 relative z-10 text-black leading-tight tracking-tight">
+                <h1 className="text-6xl font-medium mb-8 relative z-10 text-black leading-tight tracking-tight">
                     Work with <span className="text-[var(--primary-500)]">Bodhan</span>
                 </h1>
                 <p className="max-w-2xl mx-auto text-l font-medium mb-12 leading-relaxed relative z-10 text-[var(--color-15)] tracking-tight">
@@ -27,14 +28,21 @@ const WorkWithBodhan = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-                    <a href="#" className="cta-btn-dark px-8 py-4 block">
-                        <div className="cta-btn-inner"></div>
-                        <div className="cta-btn-text">Contact Us</div>
-                    </a>
-                    <a href="#" className="cta-btn-orange px-8 py-4 block">
-                        <div className="cta-btn-inner"></div>
-                        <div className="cta-btn-text">Apply to Join</div>
-                    </a>
+                    <CTAButton
+                        variant="primary"
+                        className="hover:opacity-80 transition-opacity"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeAukx8zOMY18rp_a2B7TNMbKWR6BKV3pWSWt3aXpAfDHBRlw/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Contact Us
+                    </CTAButton>
+                    <CTAButton
+                        variant="primary"
+                        className="!bg-[var(--btn-join)] !hover:bg-[var(--btn-join)] hover:opacity-80 transition-opacity border-none"
+                    >
+                        Apply to Join
+                    </CTAButton>
                 </div>
             </div>
         </Container>
