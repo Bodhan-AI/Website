@@ -34,7 +34,7 @@ Follow these instructions to get the project up and running on your local machin
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd Bodhan-Frontend
+    cd Website
     ```
 3.  Install dependencies:
     ```bash

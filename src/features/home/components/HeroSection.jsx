@@ -86,7 +86,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 1.0 }}
-          className="bg-[#0a0a0a] text-white text-sm md:text-base font-medium py-3 px-7 rounded-[10px] hover:bg-black transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-px"
+          className="bg-[#0a0a0a] text-white text-sm md:text-base font-medium py-3 px-7 rounded-[10px] hover:bg-black transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-px cursor-pointer"
+          onClick={() => document.getElementById('narrative')?.scrollIntoView({ behavior: 'smooth' })}
         >
           Explore with Us
         </Motion.button>
