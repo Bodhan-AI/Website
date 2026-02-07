@@ -119,7 +119,7 @@ const Team = () => {
             {/* Advisory Board Section */}
             <div id="advisory" className="mb-24 scroll-mt-32">
                 <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">International Advisory Council</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     {advisoryBoard.map((member, index) => (
                         <Card
                             key={index}
@@ -136,17 +136,16 @@ const Team = () => {
             {/* Board Members Section */}
             <div id="board" className="mb-24 scroll-mt-32">
                 <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">Board Members</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {boardMembers.map((member, index) => (
-                        <Card
-                            key={index}
-                            title={member.name}
-                            description={member.details ? `${member.role} — ${member.details}` : member.role}
-                            image={member.image}
-                            className="max-w-sm mx-auto w-full md:max-w-none"
-                            panelClassName="text-center"
-                        />
-                    ))}
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+                    <div className="lg:col-start-2 w-full">
+                        {boardMembers[0] && <Card title={boardMembers[0].name} description={boardMembers[0].details ? `${boardMembers[0].role} — ${boardMembers[0].details}` : boardMembers[0].role} image={boardMembers[0].image} className="max-w-sm mx-auto w-full md:max-w-none" panelClassName="text-center" />}
+                    </div>
+                    <div className="w-full">
+                        {boardMembers[1] && <Card title={boardMembers[1].name} description={boardMembers[1].details ? `${boardMembers[1].role} — ${boardMembers[1].details}` : boardMembers[1].role} image={boardMembers[1].image} className="max-w-sm mx-auto w-full md:max-w-none" panelClassName="text-center" />}
+                    </div>
+                    <div className="w-full">
+                        {boardMembers[2] && <Card title={boardMembers[2].name} description={boardMembers[2].details ? `${boardMembers[2].role} — ${boardMembers[2].details}` : boardMembers[2].role} image={boardMembers[2].image} className="max-w-sm mx-auto w-full md:max-w-none" panelClassName="text-center" />}
+                    </div>
                 </div>
             </div>
 
