@@ -57,11 +57,12 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease, delay: 0.3 }}
-          className="bg-white/70 backdrop-blur-md border border-white/40 px-5 py-2 rounded-full mb-10"
+          className="relative bg-white/70 backdrop-blur-md border border-white/40 px-5 py-2 rounded-full mb-10 shadow-[0_2px_12px_rgba(0,0,0,0.06)] overflow-hidden"
         >
-          <span className="text-[#525252] font-medium tracking-wide text-sm">
+          <span className="relative z-10 text-[#525252] font-medium tracking-wide text-sm">
             Building India's Future, One Learner at a Time.
           </span>
+          <span className="absolute bottom-0 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-[#ff6207]/60 to-transparent"></span>
         </Motion.div>
 
         <Motion.h1
