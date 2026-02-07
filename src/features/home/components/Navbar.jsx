@@ -83,7 +83,7 @@ const Navbar = () => {
                 {/* Desktop Right Links */}
                 <div className="hidden lg:flex space-x-12">
                     <motion.div variants={linkVariants}>
-                        <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Advisory Board</Link>
+                        <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">International Advisory Council</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
                         <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Careers</Link>
@@ -118,7 +118,7 @@ const Navbar = () => {
 
                     <Link to="/#about" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>About Us</Link>
                     <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>People</Link>
-                    <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Advisory Board</Link>
+                    <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>International Advisory Council</Link>
                     <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Careers</Link>
                     <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
                 </div>
