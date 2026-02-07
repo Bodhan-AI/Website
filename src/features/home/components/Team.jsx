@@ -134,6 +134,7 @@ const Team = () => {
                             description={`${member.role} — ${member.details} `}
                             image={member.image}
                             className="max-w-sm mx-auto w-full md:max-w-none"
+                            panelClassName="text-center"
                         />
                     ))}
                 </div>
@@ -150,6 +151,7 @@ const Team = () => {
                             description={member.details ? `${member.role} — ${member.details}` : member.role}
                             image={member.image}
                             className="max-w-sm mx-auto w-full md:max-w-none"
+                            panelClassName="text-center"
                         />
                     ))}
                 </div>
