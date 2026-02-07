@@ -55,6 +55,12 @@ const Team = () => {
 
     const boardMembers = [
         {
+            name: "Prof. Veezhinathan Kamakoti",
+            role: "Board Member",
+            details: "",
+            image: VeezhinathanImg
+        },
+        {
             name: "Prof. Balaraman Ravindran",
             role: "Professor IIT Madras",
             details: "",
@@ -65,12 +71,6 @@ const Team = () => {
             role: "Board Member",
             details: "",
             image: manuImg
-        },
-        {
-            name: "Prof. Veezhinathan Kamakoti",
-            role: "Board Member",
-            details: "",
-            image: VeezhinathanImg
         },
     ];
 
