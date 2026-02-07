@@ -8,7 +8,6 @@ import balaramanImg from '../../../assets/Balaraman Ravindran.jpg';
 import karthikRamanImg from '../../../assets/Karthik Raman.jpg';
 import nandanImg from '../../../assets/Nandan Sudarsanam.jpg';
 import neethiImg from '../../../assets/S Neethi.jpg';
-import vishwanathImg from '../../../assets/Vishwanath Mallikarjunan.jpg';
 import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
 import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
 import manuImg from '../../../assets/prof-manu.jpg';
@@ -98,12 +97,6 @@ const Team = () => {
             role: "Adjunct Faculty IIT Madras",
             linkedin: "https://www.linkedin.com/in/s-neethi/",
             image: neethiImg
-        },
-        {
-            name: "Mr. Vishwanath Mallikarjunan",
-            role: "Lead",
-            linkedin: "https://www.linkedin.com/in/vishwanathmallikarjunan/",
-            image: vishwanathImg
         },
         {
             name: "Mr. Karthik Mahadevan Mohanakrishnan",
