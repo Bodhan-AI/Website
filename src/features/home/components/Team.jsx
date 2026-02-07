@@ -16,7 +16,7 @@ import svethaImg from '../../../assets/svetha.jpeg';
 import ashokImg from '../../../assets/Ashok Goel.png';
 import mohanImg from '../../../assets/Mohan_Photo.jpg';
 import babakImg from '../../../assets/Babak-Hojjat.png';
-import linkedinIcon from '../../../assets/linkdin.png';
+import { Linkedin } from 'lucide-react';
 
 const Team = () => {
     const advisoryBoard = [
@@ -153,7 +153,7 @@ const Team = () => {
             <div className="mb-10">
                 <h3 className="text-3xl font-inter font-semibold text-center mb-12 text-[#1A1A1A]">Leadership</h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     {teamMembers.map((member, index) => (
                         <div key={index} className="flex flex-col items-center text-center group">
                             {/* Circular Image */}
@@ -180,10 +180,9 @@ const Team = () => {
 
                             <a
                                 href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm mt-auto"
+                                className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors mt-2"
                             >
-                                <img src={linkedinIcon} alt="LinkedIn" className="w-4 h-4 mr-1" />
-                                LinkedIn
+                                <Linkedin size={16} fill="currentColor" strokeWidth={0} />
                             </a>
                         </div>
                     ))}
