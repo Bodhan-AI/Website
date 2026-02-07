@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { Menu, X } from 'lucide-react';
 
 import Icon from '../../../assets/Icon.png';
-import LogoWithIcon from '../../../assets/Logo-with-icon.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { scrollY } = useScroll();
+
+    // Logo fades in as user scrolls past the hero logo
+    const navLogoOpacity = useTransform(scrollY, [200, 320], [0, 1]);
+    const navLogoScale = useTransform(scrollY, [200, 320], [0.5, 1]);
 
     // Animation variants
     const linkVariants = {
@@ -18,19 +22,6 @@ const Navbar = () => {
             transition: {
                 type: "spring",
                 stiffness: 100,
-                damping: 20
-            }
-        }
-    };
-
-    const logoVariants = {
-        hidden: { scale: 0.5, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 200,
                 damping: 20
             }
         }
@@ -54,23 +45,22 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 py-6 lg:py-8 flex items-center justify-center lg:justify-between relative">
 
                 {/* Desktop Left Links */}
-                <div className="hidden lg:flex space-x-12">
+                <div className="hidden lg:flex flex-1 space-x-8">
                     <motion.div variants={linkVariants}>
                         <Link to="/" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Home</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team & Sponsors</Link>
+                        <Link to="/#vision-mission" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Vision & Mission</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</Link>
+                        <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Bodhan Research</Link>
                     </motion.div>
-
                 </div>
 
-                {/* Mobile: Logo Center (justify-center) */}
+                {/* Center Logo - hidden initially, fades in on scroll */}
                 <motion.div
                     className={`flex flex-shrink-0 items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2`}
-                    variants={logoVariants}
+                    style={{ opacity: navLogoOpacity, scale: navLogoScale }}
                 >
                     <div className="flex items-center space-x-2">
                         {/* Mobile: Only Icon */}
@@ -81,15 +71,15 @@ const Navbar = () => {
                 </motion.div>
 
                 {/* Desktop Right Links */}
-                <div className="hidden lg:flex space-x-12">
+                <div className="hidden lg:flex flex-1 justify-end space-x-8">
                     <motion.div variants={linkVariants}>
                         <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">International Advisory Council</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Careers</Link>
+                        <Link to="/#leadership" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Contact</Link>
+                        <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Careers</Link>
                     </motion.div>
                 </div>
 
@@ -113,14 +103,12 @@ const Navbar = () => {
                 className="lg:hidden overflow-hidden bg-[var(--navbar-bg)]/95 backdrop-blur-xl border-t border-[var(--text-primary)]/5"
             >
                 <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
-                    <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Homepage</Link>
-                    <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</Link>
-
-                    <Link to="/#about" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>About Us</Link>
-                    <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>People</Link>
+                    <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Home</Link>
+                    <Link to="/#vision-mission" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Vision & Mission</Link>
+                    <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Bodhan Research</Link>
                     <Link to="/#advisory" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>International Advisory Council</Link>
+                    <Link to="/#leadership" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Team</Link>
                     <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Careers</Link>
-                    <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
                 </div>
             </motion.div>
         </motion.nav>

@@ -4,7 +4,7 @@ import bodhanMission from '../../../assets/bodhan-mission.avif';
 
 const VisionMission = () => {
     return (
-        <div className="w-full bg-[var(--bg-black-900)] text-white py-24 px-6 relative">
+        <div id="vision-mission" className="w-full bg-[var(--bg-black-900)] text-white py-24 px-6 relative scroll-mt-32">
             {/* Background Gradients */}
             <div className="absolute top-[10%] left-[-25%] w-[1200px] h-[1200px] bg-[radial-gradient(circle,var(--brand-gold)_0%,var(--brand-orange)_15%,var(--text-orange-400)_45%,transparent_70%)] opacity-35 blur-[120px] pointer-events-none mix-blend-screen" />
             <div className="absolute top-[-10%] right-[-20%] w-[900px] h-[900px] bg-[radial-gradient(circle,var(--text-orange-400)_0%,var(--brand-orange)_40%,transparent_70%)] opacity-30 blur-[100px] pointer-events-none mix-blend-screen" />
