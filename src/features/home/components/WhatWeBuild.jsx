@@ -18,7 +18,7 @@ const pillars = [
         image: team1
     },
     {
-        title: "Tool to enhance productivity for Teachers",
+        title: "Tools to Enhance Productivity for Teachers",
         description: [
             "Assessment and analytics AI‑driven assessment tools for automated grading, formative assessment, and diagnostic testing at scale.",
             "Learning analytics for teachers, institutions, and policymakers to track outcomes, identify at‑risk learners, and optimize interventions."
@@ -26,7 +26,7 @@ const pillars = [
         image: team2
     },
     {
-        title: "Curriculum and content",
+        title: "Curriculum and Content",
         description: [
             "Smart content generation and curation, including AI‑assisted creation of question banks, micro‑content, simulations, and multilingual materials in line with NEP 2020.",
             "Support for curriculum design that embeds AI literacy and high‑tech skills, aligned with emerging industry needs."
@@ -34,7 +34,7 @@ const pillars = [
         image: team3
     },
     {
-        title: "Digital and virtual learning environments",
+        title: "Digital and Virtual Learning Environments",
         description: [
             "Virtual learning environments, intelligent tutoring systems, and AI‑powered classroom tools that augment teachers rather than replace them.",
             "Integration with broader digital public infrastructure and EdTech ecosystems to ensure interoperability and reach."

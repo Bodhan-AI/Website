@@ -76,9 +76,15 @@ const Team = () => {
     const teamMembers = [
         {
             name: "Prof. Mitesh Khapra",
-            role: "Associate Professor IIT Madras",
+            role: "Professor, IIT Madras",
             linkedin: "https://www.linkedin.com/in/mitesh-khapra-3bb3032/",
             image: miteshImg
+        },
+        {
+            name: "Dr. S Neethi",
+            role: "Adjunct Faculty, IIT Madras",
+            linkedin: "https://www.linkedin.com/in/s-neethi/",
+            image: neethiImg
         },
         {
             name: "Prof. Karthik Raman",
@@ -88,19 +94,13 @@ const Team = () => {
         },
         {
             name: "Prof. Nandan Sudarsanam",
-            role: "Associate Professor IIT Madras",
+            role: "Professor IIT Madras",
             linkedin: "https://www.linkedin.com/in/nandan-sudarsanam-67359b6/",
             image: nandanImg
         },
         {
-            name: "Dr. S Neethi",
-            role: "Adjunct Faculty IIT Madras",
-            linkedin: "https://www.linkedin.com/in/s-neethi/",
-            image: neethiImg
-        },
-        {
             name: "Mr. Karthik Mahadevan Mohanakrishnan",
-            role: "Lead",
+            role: "COO, Bodhan AI",
             linkedin: "https://www.linkedin.com/in/karthikmaha/",
             image: karthikMahaImg
         }

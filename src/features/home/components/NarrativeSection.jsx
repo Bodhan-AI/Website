@@ -17,12 +17,12 @@ const NarrativeSection = () => {
 
                 {/* Paragraph 1 */}
                 <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-8 max-w-4xl">
-                    Bodhan AI is the Center of Excellence in Artificial Intelligence for Education, incubated by IIT Madras as a Section 8 Company and aligned with the National Education Policy 2020. Supported by dedicated funding in the Union Budget 2025–26, it is a flagship national initiative advancing AI-driven education and skilling. Guided by the vision of “Make AI in India, Make AI Work for India,” Bodhan AI serves as critical AI infrastructure to transform learning, teaching, and talent development at scale staying true to its Sanskrit meaning of “Awakening” or “Enlightenment.”
+                    Bodhan AI is the Centre of Excellence in Artificial Intelligence for Education, incubated by IIT Madras as a Section 8 Company. Supported by the Ministry of Education, it is a flagship national initiative advancing AI driven education and skilling. Guided by the vision of Make AI in India, Make AI Work for India, Bodhan AI is building critical public digital infrastructure to transform learning, teaching, assessment, and talent development at scale, staying true to its Sanskrit meaning of Awakening or Enlightenment.
                 </p>
 
                 {/* Paragraph 2 */}
                 <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-8 max-w-4xl">
-                    India’s education landscape is unlike any other. Millions of learners, hundreds of languages, and deeply varied social and regional contexts demand systems that can adapt without excluding and scale without flattening diversity. Bodhan.AI exists to design, build, and steward the open Bharat EduAI Stack as a sovereign Digital Public Infrastructure, enabling inclusive, multilingual, and context aware AI capabilities for learning, teaching, assessment, and guidance across every district, institution, and demographic in the country.
+                    India’s education landscape is unlike any other. Millions of learners, hundreds of languages, and deeply varied social and regional contexts demand systems that can adapt without excluding and scale without flattening diversity. Bodhan AI exists to design, build, and steward the open Bharat EduAI Stack as a sovereign Digital Public Infrastructure, enabling inclusive, multilingual, and context aware AI capabilities for learning, teaching, assessment, and guidance across every district, institution, and demographic in the country.
                 </p>
 
                 {/* Tagline */}
