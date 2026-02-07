@@ -16,6 +16,7 @@ import jeffImg from '../../../assets/Jeff Ullman.jpg';
 import svethaImg from '../../../assets/svetha.jpeg';
 import ashokImg from '../../../assets/Ashok Goel.png';
 import mohanImg from '../../../assets/Mohan_Photo.jpg';
+import babakImg from '../../../assets/Babak-Hojjat.png';
 import linkedinIcon from '../../../assets/linkdin.png';
 
 const Team = () => {
@@ -43,6 +44,12 @@ const Team = () => {
             role: "Provost's Chair Professor, NUS",
             details: "Founding Director of NUS AI Institute. Deputy Executive Chairman of AI Singapore. Fellow of IEEE, IAPR, and ACM.",
             image: mohanImg
+        },
+        {
+            name: "Dr. Babak Hodjat",
+            role: "Chief AI Officer, Cognizant",
+            details: "Former co-founder/CEO of Sentient. Primary inventor of technology behind Apple’s Siri. Named in 2025 AI 100 UK list.",
+            image: babakImg
         }
     ];
 
@@ -118,7 +125,7 @@ const Team = () => {
 
             {/* Advisory Board Section */}
             <div id="advisory" className="mb-24 scroll-mt-32">
-                <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">Advisory Board</h3>
+                <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">International Advisory Council</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {advisoryBoard.map((member, index) => (
                         <Card
