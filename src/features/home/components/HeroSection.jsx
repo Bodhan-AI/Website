@@ -56,7 +56,7 @@ const HeroSection = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-16 pt-[120px] md:pt-[150px] lg:pt-[184px] pb-[100px] md:pb-[120px] lg:pb-[150px] max-w-[880px] mx-auto">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-16 pt-[50px] md:pt-[60px] lg:pt-[70px] pb-[40px] md:pb-[50px] lg:pb-[60px] max-w-[880px] mx-auto">
 
         {/* Hero Logo - shrinks and fades on scroll */}
         <Motion.img
@@ -66,14 +66,14 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease, delay: 0.1 }}
           style={{ scale: heroLogoScale, opacity: heroLogoOpacity }}
-          className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain mb-8"
+          className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain mb-4"
         />
 
         <Motion.div
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease, delay: 0.3 }}
-          className="relative bg-white/70 backdrop-blur-md border border-white/40 px-5 py-2 rounded-full mb-10 shadow-[0_2px_12px_rgba(0,0,0,0.06)] overflow-hidden"
+          className="relative bg-white/70 backdrop-blur-md border border-white/40 px-5 py-2 rounded-full mb-4 shadow-[0_2px_12px_rgba(0,0,0,0.06)] overflow-hidden"
         >
           <span className="relative z-10 text-[#525252] font-medium tracking-wide text-sm">
             Building India's Future, One Learner at a Time.
@@ -94,7 +94,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease, delay: 0.8 }}
-          className="text-[#525252] text-xs md:text-sm lg:text-base tracking-[0.15em] uppercase font-medium mb-10 text-center"
+          className="text-[#525252] text-xs md:text-sm lg:text-base tracking-[0.15em] uppercase font-medium mb-6 text-center"
         >
           Centre of Excellence in AI for Education
         </Motion.p>

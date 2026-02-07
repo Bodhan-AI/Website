@@ -150,7 +150,7 @@ const Team = () => {
             </div>
 
             {/* Leadership / Org Chart Section */}
-            <div className="mb-10">
+            <div id="leadership" className="mb-10 scroll-mt-32">
                 <h3 className="text-3xl font-inter font-semibold text-center mb-12 text-[#1A1A1A]">Leadership</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
