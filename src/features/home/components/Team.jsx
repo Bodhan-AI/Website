@@ -61,7 +61,7 @@ const Team = () => {
         },
         {
             name: "Prof. Balaraman Ravindran",
-            role: "HoD - DSAI, IIT Madras",
+            role: "Head - DSAI, IIT Madras",
             details: "",
             image: balaramanImg
         },
