@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { Menu, X } from 'lucide-react';
 
 import Icon from '../../../assets/Icon.png';
-import LogoWithIcon from '../../../assets/Logo-with-icon.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { scrollY } = useScroll();
+
+    // Logo fades in as user scrolls past the hero logo
+    const navLogoOpacity = useTransform(scrollY, [200, 320], [0, 1]);
+    const navLogoScale = useTransform(scrollY, [200, 320], [0.5, 1]);
 
     // Animation variants
     const linkVariants = {
@@ -18,19 +22,6 @@ const Navbar = () => {
             transition: {
                 type: "spring",
                 stiffness: 100,
-                damping: 20
-            }
-        }
-    };
-
-    const logoVariants = {
-        hidden: { scale: 0.5, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 200,
                 damping: 20
             }
         }
@@ -67,10 +58,10 @@ const Navbar = () => {
 
                 </div>
 
-                {/* Mobile: Logo Center (justify-center) */}
+                {/* Center Logo - hidden initially, fades in on scroll */}
                 <motion.div
                     className={`flex flex-shrink-0 items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2`}
-                    variants={logoVariants}
+                    style={{ opacity: navLogoOpacity, scale: navLogoScale }}
                 >
                     <div className="flex items-center space-x-2">
                         {/* Mobile: Only Icon */}

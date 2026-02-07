@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion as Motion, useScroll, useTransform } from "motion/react";
 import { Link } from 'react-router-dom';
+import Icon from '../../../assets/Icon.png';
 
 const ease = [0.25, 0.46, 0.45, 0.94];
 
@@ -27,6 +28,10 @@ const HeroSection = () => {
 
   const arcHeight = useTransform(scrollY, [0, maxScroll], heights);
 
+  // Hero logo scroll animation
+  const heroLogoScale = useTransform(scrollY, [0, 250], [1, 0.3]);
+  const heroLogoOpacity = useTransform(scrollY, [150, 280], [1, 0]);
+
   return (
     <div className="relative w-full hero-radial-gradient bg-orange-50 overflow-hidden flex flex-col items-center">
 
@@ -52,6 +57,17 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 md:px-12 lg:px-16 pt-[120px] md:pt-[150px] lg:pt-[184px] pb-[100px] md:pb-[120px] lg:pb-[150px] max-w-[880px] mx-auto">
+
+        {/* Hero Logo - shrinks and fades on scroll */}
+        <Motion.img
+          src={Icon}
+          alt="Bodhan Logo"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease, delay: 0.1 }}
+          style={{ scale: heroLogoScale, opacity: heroLogoOpacity }}
+          className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain mb-8"
+        />
 
         <Motion.div
           initial={{ opacity: 0, y: -16 }}
