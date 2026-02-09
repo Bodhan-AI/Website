@@ -32,9 +32,7 @@ const WorkWithBodhan = () => {
                     <CTAButton
                         variant="primary"
                         className="hover:opacity-80 transition-opacity"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeAukx8zOMY18rp_a2B7TNMbKWR6BKV3pWSWt3aXpAfDHBRlw/viewform"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:contact@bodhan.ai"
                     >
                         Contact Us
                     </CTAButton>
