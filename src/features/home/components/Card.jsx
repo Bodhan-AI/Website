@@ -17,10 +17,10 @@ const Card = ({ title, description, image, className = "", panelClassName = "", 
             )}
 
             {/* White Text Panel - Solid on Hover */}
-            <div className={`absolute bottom-4 left-4 right-4 backdrop-blur-md border rounded-2xl p-6 shadow-sm transition-all duration-300 ease-out max-h-[calc(100%-2rem)] overflow-hidden flex flex-col
+            <div className={`absolute bottom-4 left-4 right-4 border rounded-2xl p-6 shadow-sm transition-all duration-300 ease-out max-h-[calc(100%-2rem)] overflow-hidden flex flex-col
                 ${image
-                    ? 'bg-white border-transparent text-gray-900 group-hover:backdrop-blur-none'
-                    : 'bg-white/60 border-white/50 group-hover:bg-white group-hover:backdrop-blur-none group-hover:border-transparent'
+                    ? 'bg-white border-transparent text-gray-900'
+                    : 'bg-white/60 backdrop-blur-md border-white/50 group-hover:bg-white group-hover:backdrop-blur-none group-hover:border-transparent'
                 } ${panelClassName}`}>
                 <h3 className={`text-xl font-medium mb-0 leading-tight text-gray-900`}>
                     {title}

@@ -6,9 +6,9 @@ const VisionMission = () => {
     return (
         <div id="vision-mission" className="w-full bg-[var(--bg-black-900)] text-white pt-24 pb-4 px-6 relative scroll-mt-32">
             {/* Background Gradients */}
-            <div className="absolute top-[10%] left-[-25%] w-[1200px] h-[1200px] bg-[radial-gradient(circle,var(--brand-gold)_0%,var(--brand-orange)_15%,var(--text-orange-400)_45%,transparent_70%)] opacity-35 blur-[120px] pointer-events-none mix-blend-screen" />
-            <div className="absolute top-[-10%] right-[-20%] w-[900px] h-[900px] bg-[radial-gradient(circle,var(--text-orange-400)_0%,var(--brand-orange)_40%,transparent_70%)] opacity-30 blur-[100px] pointer-events-none mix-blend-screen" />
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-gray-200/30 to-transparent blur-[80px] rounded-full pointer-events-none" />
+            <div className="absolute top-[10%] left-[-25%] w-[1200px] h-[1200px] bg-[radial-gradient(circle,var(--brand-gold)_0%,var(--brand-orange)_15%,var(--text-orange-400)_45%,transparent_70%)] opacity-35 blur-[120px] pointer-events-none mix-blend-screen will-change-[transform] [contain:strict]" />
+            <div className="absolute top-[-10%] right-[-20%] w-[900px] h-[900px] bg-[radial-gradient(circle,var(--text-orange-400)_0%,var(--brand-orange)_40%,transparent_70%)] opacity-30 blur-[100px] pointer-events-none mix-blend-screen will-change-[transform] [contain:strict]" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-gray-200/30 to-transparent blur-[80px] rounded-full pointer-events-none will-change-[transform] [contain:strict]" />
             {/* Vision Block */}
             <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-40 relative z-10">
                 <div className="text-left">
