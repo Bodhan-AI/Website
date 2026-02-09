@@ -70,7 +70,7 @@ const WhatWeBuild = () => {
             </div>
 
             {/* Open Research Problems Section */}
-            <div id="research" className="mt-40 max-w-4xl mx-auto scroll-mt-40">
+            <div id="research" className="mt-16 md:mt-40 max-w-4xl mx-auto scroll-mt-40">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 leading-tight">
                     Open Research Problems in<br />
                     <span className="text-[var(--text-orange-500)]">AI for Education</span>
