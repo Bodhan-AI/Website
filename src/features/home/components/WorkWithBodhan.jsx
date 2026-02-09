@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from './Container';
 import CTAButton from './CTAButton';
 
@@ -31,18 +32,17 @@ const WorkWithBodhan = () => {
                     <CTAButton
                         variant="primary"
                         className="hover:opacity-80 transition-opacity"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeAukx8zOMY18rp_a2B7TNMbKWR6BKV3pWSWt3aXpAfDHBRlw/viewform"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:contact@bodhan.ai"
                     >
                         Contact Us
                     </CTAButton>
-                    <CTAButton
-                        variant="primary"
-                        className="!bg-[var(--btn-join)] !hover:bg-[var(--btn-join)] hover:opacity-80 transition-opacity border-none"
+                    <Link
+                        to="/careers"
+                        onClick={() => window.scrollTo(0, 0)}
+                        className="px-8 py-4 rounded-xl font-medium text-lg transition-colors shadow-lg bg-[var(--btn-join)] hover:opacity-80 transition-opacity border-none text-white"
                     >
-                        Apply to Join
-                    </CTAButton>
+                        Join Us
+                    </Link>
                 </div>
             </div>
         </Container>
