@@ -136,7 +136,7 @@ const Team = () => {
             </div>
 
             {/* Advisory Board Section */}
-            <div id="advisory" className="mb-10 scroll-mt-32 text-center">
+            <div id="advisory" className="mb-2 scroll-mt-32 text-center">
                 <h3 className="text-3xl font-bold mb-4 text-[#1A1A1A]">International Advisory Council</h3>
                 <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-8">
                     Distinguished global leaders guiding Bodhan AI's vision for transforming education through Artificial Intelligence.

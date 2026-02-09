@@ -3,10 +3,10 @@ import { Facebook, Linkedin, MessageCircle, Twitter, Youtube } from 'lucide-reac
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-[var(--bg-cream-50)] py-12 px-6">
+        <footer className="w-full bg-[var(--bg-cream-50)] py-4 px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Top Section: Logo and Social Icons */}
-                <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div className="flex flex-col md:flex-row justify-between items-center mb-2">
                     {/* Left: Logo */}
                     <div className="text-2xl font-400 text-gray-900 mb-6 md:mb-0">
                         Bodhan<span className="text-[var(--text-orange-500)]">.AI</span>
@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
 
                 {/* Separator Line */}
-                <div className="w-full h-px bg-gray-300 mb-8"></div>
+                <div className="w-full h-px bg-gray-300 mb-4"></div>
 
                 {/* Bottom: Copyright */}
                 <div className="text-center text-sm text-gray-500">

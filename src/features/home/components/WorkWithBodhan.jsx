@@ -5,8 +5,8 @@ import CTAButton from './CTAButton';
 
 const WorkWithBodhan = () => {
     return (
-        <Container className="py-16 scroll-mt-32" id="careers">
-            <div className="w-full rounded-[3rem] p-8 md:p-24 text-center shadow-xl relative overflow-hidden">
+        <Container className="py-12 scroll-mt-32" id="careers">
+            <div className="max-w-[85rem] mx-auto rounded-[3rem] px-8 py-6 md:px-24 md:py-16 text-center shadow-xl relative overflow-hidden">
 
                 {/* Background layers */}
                 <div className="absolute inset-0 z-0">
