@@ -3,10 +3,10 @@ import Container from './Container';
 import SectionHeading from './SectionHeading';
 import Card from './Card';
 
-import team1 from '../../../assets/team1.png';
-import team2 from '../../../assets/team2.png';
-import team3 from '../../../assets/team3.png';
-import team4 from '../../../assets/team4.png';
+import team1 from '../../../assets/team1.webp';
+import team2 from '../../../assets/team2.webp';
+import team3 from '../../../assets/team3.webp';
+import team4 from '../../../assets/team4.webp';
 
 const pillars = [
     {
