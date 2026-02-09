@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from './Container';
 import SectionHeading from './SectionHeading';
 import Card from './Card';
@@ -11,47 +12,9 @@ import neethiImg from '../../../assets/S Neethi.jpg';
 import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
 import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
 import manuImg from '../../../assets/prof-manu.jpg';
-import jeffImg from '../../../assets/Jeff Ullman.jpg';
-import svethaImg from '../../../assets/svetha.jpeg';
-import ashokImg from '../../../assets/Ashok Goel.png';
-import mohanImg from '../../../assets/Mohan_Photo.jpg';
-import babakImg from '../../../assets/Babak-Hojjat.png';
 import { Linkedin } from 'lucide-react';
 
 const Team = () => {
-    const advisoryBoard = [
-        {
-            name: "Prof. Jeff Ullman",
-            role: "Professor Emeritus, Stanford University",
-            details: "AM Turing Award winner (2020), CEO of Gradiance Corp. Author of 16 books including 'Database Systems' and 'Compilers'.",
-            image: jeffImg
-        },
-        {
-            name: "Prof. Svetha Venkatesh",
-            role: "Distinguished Professor, Deakin University",
-            details: "Co-Director of Deakin Applied AI. Australian Laureate Fellow and Fellow of the Australian Academy of Science.",
-            image: svethaImg
-        },
-        {
-            name: "Prof. Ashok Goel",
-            role: "Professor, Georgia Tech",
-            details: "Chief Scientist, C21U. Fellow of AAAI and Cognitive Science Society. Recipient of AAAI Outstanding AI Educator Award.",
-            image: ashokImg
-        },
-        {
-            name: "Prof. Mohan Kankanhalli",
-            role: "Provost's Chair Professor, NUS",
-            details: "Founding Director of NUS AI Institute. Deputy Executive Chairman of AI Singapore. Fellow of IEEE, IAPR, and ACM.",
-            image: mohanImg
-        },
-        {
-            name: "Dr. Babak Hodjat",
-            role: "Chief AI Officer, Cognizant",
-            details: "Former co-founder/CEO of Sentient. Primary inventor of technology behind Apple’s Siri. Named in 2025 AI 100 UK list.",
-            image: babakImg
-        }
-    ];
-
     const boardMembers = [
         {
             name: "Prof. Veezhinathan Kamakoti",
@@ -116,23 +79,6 @@ const Team = () => {
                 parallax={true}
             />
 
-            {/* Advisory Board Section */}
-            <div id="advisory" className="mb-24 scroll-mt-32">
-                <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">International Advisory Council</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                    {advisoryBoard.map((member, index) => (
-                        <Card
-                            key={index}
-                            title={member.name}
-                            description={`${member.role} — ${member.details} `}
-                            image={member.image}
-                            className="max-w-sm mx-auto w-full md:max-w-none"
-                            panelClassName="text-center"
-                        />
-                    ))}
-                </div>
-            </div>
-
             {/* Board Members Section */}
             <div id="board" className="mb-24 scroll-mt-32">
                 <h3 className="text-3xl font-bold text-center mb-12 text-[#1A1A1A]">Board Members</h3>
@@ -150,7 +96,7 @@ const Team = () => {
             </div>
 
             {/* Leadership / Org Chart Section */}
-            <div className="mb-10">
+            <div className="mb-24">
                 <h3 className="text-3xl font-inter font-semibold text-center mb-12 text-[#1A1A1A]">Leadership</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -187,6 +133,21 @@ const Team = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            {/* Advisory Board Section */}
+            <div id="advisory" className="mb-10 scroll-mt-32 text-center">
+                <h3 className="text-3xl font-bold mb-4 text-[#1A1A1A]">International Advisory Council</h3>
+                <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-8">
+                    Distinguished global leaders guiding Bodhan AI's vision for transforming education through Artificial Intelligence.
+                </p>
+                <Link
+                    to="/advisory-council"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="inline-block bg-[#0a0a0a] text-white text-sm md:text-base font-medium py-3 px-7 rounded-[10px] hover:bg-black transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-px"
+                >
+                    International Advisory Council
+                </Link>
             </div>
         </Container>
     );
