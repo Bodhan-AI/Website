@@ -16,15 +16,15 @@ const pillars = [
                 <strong>Learning, Tutoring, Practice, and Assessment as a Unified System</strong>
                 <br /><br />
                 Bodhan will provide a set of interoperable system capabilities that support learning, practice, tutoring, and assessment across the classroom lifecycle. These capabilities will be designed to work together, rather than as standalone applications, enabling coherent learner journeys and consistent teacher workflows.
-                <ul className="list-disc pl-4 mt-3 space-y-1 text-left">
-                    <li>Foundational literacy and numeracy diagnostics and remediation</li>
-                    <li>Just-in-time conversational academic support</li>
-                    <li>Curriculum-aligned instructional content with embedded interaction</li>
-                    <li>Adaptive practice and remediation driven by learner data</li>
-                    <li>Automated assessment and structured teacher feedback</li>
-                </ul>
             </>
         ),
+        bullets: [
+            "Foundational literacy and numeracy diagnostics and remediation",
+            "Just-in-time conversational academic support",
+            "Curriculum-aligned instructional content with embedded interaction",
+            "Adaptive practice and remediation driven by learner data",
+            "Automated assessment and structured teacher feedback",
+        ],
         image: team1
     },
     {
@@ -34,15 +34,15 @@ const pillars = [
                 <strong>Foundational AI Models for Education</strong>
                 <br /><br />
                 At the core of the system would be foundational AI models purpose-built for educational settings. These models will be developed and owned in-house, trained on classroom-grounded data, and optimized for pedagogy rather than general consumer use.
-                <ul className="list-disc pl-4 mt-3 space-y-1 text-left">
-                    <li>Child speech diagnostics for fluency, pronunciation, and prosody</li>
-                    <li>Education- and STEM-aware speech recognition across Indian languages</li>
-                    <li>Handwritten and printed educational OCR, including mathematics and diagrams</li>
-                    <li>Pedagogy-aligned language models for explanation, tutoring, and question generation</li>
-                    <li>Empathetic text-to-speech designed for children</li>
-                </ul>
             </>
         ),
+        bullets: [
+            "Child speech diagnostics for fluency, pronunciation, and prosody",
+            "Education- and STEM-aware speech recognition across Indian languages",
+            "Handwritten and printed educational OCR, including mathematics and diagrams",
+            "Pedagogy-aligned language models for explanation, tutoring, and question generation",
+            "Empathetic text-to-speech designed for children",
+        ],
         image: team2
     },
     {
@@ -52,15 +52,15 @@ const pillars = [
                 <strong>Infrastructure That Turns AI into a Public Utility</strong>
                 <br /><br />
                 Bodhan will also build the scalable infrastructure required to operate AI systems reliably in real classrooms at scale. This layer abstracts complexity away from states and partners, allowing easy deployments across states.
-                <ul className="list-disc pl-4 mt-3 space-y-1 text-left">
-                    <li>Training and fine-tuning pipelines for multilingual AI models</li>
-                    <li>Low-latency, voice-first inference and batch processing</li>
-                    <li>Unified data fabric with versioning, lineage, and access controls</li>
-                    <li>Compute abstraction across cloud, on-premise, and edge environments</li>
-                    <li>Orchestration of multi-step AI workflows</li>
-                </ul>
             </>
         ),
+        bullets: [
+            "Training and fine-tuning pipelines for multilingual AI models",
+            "Low-latency, voice-first inference and batch processing",
+            "Unified data fabric with versioning, lineage, and access controls",
+            "Compute abstraction across cloud, on-premise, and edge environments",
+            "Orchestration of multi-step AI workflows",
+        ],
         image: team3
     },
     {
@@ -70,15 +70,15 @@ const pillars = [
                 <strong>Data, Evidence, and Public Deployment</strong>
                 <br /><br />
                 All AI capabilities are grounded in large-scale, purpose-built educational data and deployed through formal public partnerships. Schools are treated as long-running system testbeds, not short-term pilots.
-                <ul className="list-disc pl-4 mt-3 space-y-1 text-left">
-                    <li>Classroom-grounded speech, handwriting, and interaction data</li>
-                    <li>Multilingual and multi-dialect coverage</li>
-                    <li>Continuous feedback loops from live deployments</li>
-                    <li>Rigorous impact evaluation and evidence generation</li>
-                    <li>Capacity building for teachers and administrators</li>
-                </ul>
             </>
         ),
+        bullets: [
+            "Classroom-grounded speech, handwriting, and interaction data",
+            "Multilingual and multi-dialect coverage",
+            "Continuous feedback loops from live deployments",
+            "Rigorous impact evaluation and evidence generation",
+            "Capacity building for teachers and administrators",
+        ],
         image: team4
     }
 ];
@@ -101,6 +101,7 @@ const WhatWeBuild = () => {
                         key={index}
                         title={item.title}
                         description={item.description}
+                        bullets={item.bullets}
                         image={item.image}
                         className="aspect-[3/5] md:aspect-[3/5] max-w-sm mx-auto w-full md:max-w-none"
                         panelClassName="p-4"
