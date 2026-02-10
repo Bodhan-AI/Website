@@ -32,7 +32,7 @@ const WorkWithBodhan = () => {
                     <Link
                         to="/contact"
                         onClick={() => window.scrollTo(0, 0)}
-                        className="px-8 py-4 rounded-xl font-medium text-lg transition-colors shadow-lg bg-[var(--brand-orange)] hover:opacity-80 text-white"
+                        className="px-8 py-4 rounded-xl font-medium text-lg transition-colors shadow-lg bg-[#1A1A1A] hover:bg-black text-white"
                     >
                         Contact Us
                     </Link>
