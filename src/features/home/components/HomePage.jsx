@@ -15,8 +15,8 @@ const HomePage = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if (location.hash) {
-            const element = document.getElementById(location.hash.substring(1));
+        if (location.state?.scrollTo) {
+            const element = document.getElementById(location.state.scrollTo);
             if (element) {
                 setTimeout(() => {
                     element.scrollIntoView({ behavior: 'smooth' });
