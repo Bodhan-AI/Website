@@ -1,9 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
 
-const Card = ({ title, description, image, className = "", panelClassName = "", descriptionClassName = "" }) => {
+const Card = ({ title, description, bullets, image, className = "", panelClassName = "", descriptionClassName = "" }) => {
     const cardRef = useRef(null);
     const [isInView, setIsInView] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [bulletsOpen, setBulletsOpen] = useState(false);
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 1024);
@@ -53,18 +55,40 @@ const Card = ({ title, description, image, className = "", panelClassName = "", 
                     {title}
                 </h3>
 
-                {/* Expandable Description */}
+                {/* Expandable Description — shows on hover / scroll-into-view */}
                 <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${expanded ? 'grid-rows-[1fr]' : 'grid-rows-[0fr] group-hover:grid-rows-[1fr]'}`}>
                     <div className={`overflow-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] ${expanded ? 'overflow-y-auto' : 'group-hover:overflow-y-auto'}`}>
                         {Array.isArray(description) ? (
-                            <ul className={`text-sm font-inter mt-4 transition-opacity duration-300 delay-100 leading-relaxed list-disc pl-5 text-left ${expanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} ${image ? 'text-gray-600' : 'text-gray-600'} ${descriptionClassName}`}>
+                            <ul className={`text-sm font-inter mt-4 transition-opacity duration-300 delay-100 leading-relaxed list-disc pl-5 text-left ${expanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} text-gray-600 ${descriptionClassName}`}>
                                 {description.map((item, index) => (
                                     <li key={index} className="mb-2 last:mb-0">{item}</li>
                                 ))}
                             </ul>
                         ) : (
-                            <div className={`text-sm font-inter mt-4 transition-opacity duration-300 delay-100 leading-relaxed ${expanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} ${image ? 'text-gray-600' : 'text-gray-600'} ${descriptionClassName}`}>
+                            <div className={`text-sm font-inter mt-4 transition-opacity duration-300 delay-100 leading-relaxed ${expanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} text-gray-600 ${descriptionClassName}`}>
                                 {description}
+                            </div>
+                        )}
+
+                        {/* Bullets — click to expand */}
+                        {bullets && bullets.length > 0 && (
+                            <div className={`transition-opacity duration-300 delay-100 ${expanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                                <button
+                                    onClick={(e) => { e.stopPropagation(); setBulletsOpen(!bulletsOpen); }}
+                                    className="flex items-center gap-1 mt-3 text-xs font-medium text-[#FF6B35] hover:text-[#E55A2B] transition-colors cursor-pointer"
+                                >
+                                    <ChevronDown size={14} className={`transition-transform duration-200 ${bulletsOpen ? 'rotate-180' : ''}`} />
+                                    {bulletsOpen ? 'Collapse' : 'Learn more'}
+                                </button>
+                                <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${bulletsOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                                    <div className="overflow-hidden">
+                                        <ul className="list-disc pl-4 mt-2 space-y-1 text-left text-xs text-gray-600 leading-relaxed">
+                                            {bullets.map((item, index) => (
+                                                <li key={index}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         )}
                     </div>
