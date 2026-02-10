@@ -16,7 +16,7 @@ const NarrativeSection = () => {
                 </h2>
 
                 <p className="text-[var(--color-14)] font-inter text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 max-w-4xl">
-                    <span className="font-semibold text-white">Bodhan AI: The Centre of Excellence in AI for Education</span> An IIT Madras-incubated initiative supported by the Ministry of Education, Bodhan AI building the <span className="font-semibold text-white">Bharat EduAI Stack as a sovereign Digital Public Infrastructure</span> . We are building sovereign, context-aware AI tools for learning and teaching, ensuring no demographic is left behind in India's digital transformation.
+                    <span className="font-semibold text-white">Bodhan AI - The Centre of Excellence in AI for Education</span> is an IIT Madras-incubated initiative supported by the Ministry of Education, building the <span className="font-semibold text-white">Bharat EduAI Stack as a sovereign Digital Public Infrastructure</span> . We are building sovereign, context-aware AI tools for learning and teaching, ensuring no demographic is left behind in India's digital transformation.
                 </p>
 
 
