@@ -65,6 +65,7 @@
 }
 
 @theme {
+  --font-syne: "Syne", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
@@ -83,6 +84,9 @@ h3 {
 }
 
 /* Utility Classes */
+.font-syne {
+  font-family: var(--font-syne);
+}
 .transition-spring {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
