@@ -73,13 +73,15 @@ const Card = ({ title, description, bullets, image, className = "", panelClassNa
                         {/* Bullets — click to expand */}
                         {bullets && bullets.length > 0 && (
                             <div className={`transition-opacity duration-300 delay-100 ${expanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
-                                <button
-                                    onClick={(e) => { e.stopPropagation(); setBulletsOpen(!bulletsOpen); }}
-                                    className="flex items-center gap-1 mt-3 text-xs font-medium text-[#FF6B35] hover:text-[#E55A2B] transition-colors cursor-pointer"
-                                >
-                                    <ChevronDown size={14} className={`transition-transform duration-200 ${bulletsOpen ? 'rotate-180' : ''}`} />
-                                    {bulletsOpen ? 'Collapse' : 'Learn more'}
-                                </button>
+                                {!bulletsOpen && (
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); setBulletsOpen(true); }}
+                                        className="flex items-center justify-center gap-1 mt-3 w-full text-xs font-medium text-[#FF6B35] hover:text-[#E55A2B] transition-colors cursor-pointer"
+                                    >
+                                        <ChevronDown size={14} />
+                                        Learn more
+                                    </button>
+                                )}
                                 <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${bulletsOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
                                     <div className="overflow-hidden">
                                         <ul className="list-disc pl-4 mt-2 space-y-1 text-left text-xs text-gray-600 leading-relaxed">
@@ -87,6 +89,13 @@ const Card = ({ title, description, bullets, image, className = "", panelClassNa
                                                 <li key={index}>{item}</li>
                                             ))}
                                         </ul>
+                                        <button
+                                            onClick={(e) => { e.stopPropagation(); setBulletsOpen(false); }}
+                                            className="flex items-center justify-center gap-1 mt-3 w-full text-xs font-medium text-[#FF6B35] hover:text-[#E55A2B] transition-colors cursor-pointer"
+                                        >
+                                            <ChevronDown size={14} className="rotate-180" />
+                                            Collapse
+                                        </button>
                                     </div>
                                 </div>
                             </div>
