@@ -70,7 +70,7 @@ const Team = () => {
     ];
 
     return (
-        <Container className="pt-20 pb-10 scroll-mt-32" id="team">
+        <Container className="pt-0 md:pt-20 pb-10 scroll-mt-32" id="team">
             <SectionHeading
                 title="Our People"
                 highlightWord="People"
