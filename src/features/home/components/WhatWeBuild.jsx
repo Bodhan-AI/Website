@@ -87,8 +87,8 @@ const WhatWeBuild = () => {
     return (
         <Container className="py-20 text-center">
             <SectionHeading
-                title="What We Build"
-                highlightWord="Build"
+                title="What We Are Building"
+                highlightWord="Building"
                 subtitle="Bodhan is a foundational AI infrastructure for education designed to be adopted, extended, and governed within public systems."
                 className="mb-8"
                 parallax={true}
