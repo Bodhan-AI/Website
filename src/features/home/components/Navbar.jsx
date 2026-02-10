@@ -62,7 +62,7 @@ const Navbar = () => {
                         <Link to="/" state={{ scrollTo: 'vision-mission' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Vision</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/" state={{ scrollTo: 'research' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</Link>
+                        <a href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</a>
                     </motion.div>
                 </div>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
                         <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Careers</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/" state={{ scrollTo: 'careers' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Contact</Link>
+                        <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
                     </motion.div>
                 </div>
 
@@ -114,10 +114,10 @@ const Navbar = () => {
                 <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
                     <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Home</Link>
                     <Link to="/" state={{ scrollTo: 'vision-mission' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Vision</Link>
-                    <Link to="/" state={{ scrollTo: 'research' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</Link>
+                    <a href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</a>
                     <Link to="/" state={{ scrollTo: 'team' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Team</Link>
                     <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Careers</Link>
-                    <Link to="/" state={{ scrollTo: 'careers' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+                    <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Contact</Link>
                 </div>
             </motion.div>
         </motion.nav>

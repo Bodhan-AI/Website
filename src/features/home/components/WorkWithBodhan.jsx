@@ -29,13 +29,13 @@ const WorkWithBodhan = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-                    <CTAButton
-                        variant="primary"
-                        className="hover:opacity-80 transition-opacity"
-                        href="mailto:contact@bodhan.ai"
+                    <Link
+                        to="/contact"
+                        onClick={() => window.scrollTo(0, 0)}
+                        className="px-8 py-4 rounded-xl font-medium text-lg transition-colors shadow-lg bg-[#1A1A1A] hover:bg-black text-white"
                     >
                         Contact Us
-                    </CTAButton>
+                    </Link>
                     <Link
                         to="/careers"
                         onClick={() => window.scrollTo(0, 0)}
