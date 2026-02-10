@@ -5,8 +5,8 @@ import CTAButton from './CTAButton';
 
 const WorkWithBodhan = () => {
     return (
-        <Container className="py-16 scroll-mt-32" id="careers">
-            <div className="w-full rounded-[3rem] p-8 md:p-24 text-center shadow-xl relative overflow-hidden">
+        <Container className="py-12 scroll-mt-32" id="careers">
+            <div className="max-w-[85rem] mx-auto rounded-2xl md:rounded-[3rem] px-6 py-8 md:px-24 md:py-16 text-center shadow-xl relative overflow-hidden">
 
                 {/* Background layers */}
                 <div className="absolute inset-0 z-0">
@@ -21,10 +21,10 @@ const WorkWithBodhan = () => {
                 </div>
 
 
-                <h1 className="text-6xl font-medium mb-8 relative z-10 text-black leading-tight tracking-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-medium mb-6 md:mb-8 relative z-10 text-black leading-tight tracking-tight">
                     Work with <span className="text-[var(--primary-500)]">Bodhan</span>
                 </h1>
-                <p className="max-w-2xl mx-auto text-l font-medium mb-12 leading-relaxed relative z-10 text-[var(--color-15)] tracking-tight">
+                <p className="max-w-2xl mx-auto text-base md:text-lg font-medium mb-8 md:mb-12 leading-relaxed relative z-10 text-[var(--color-15)] tracking-tight">
                     Bodhan collaborates with governments, institutions, researchers, and practitioners committed to strengthening education through responsible AI. If you would like to engage, collaborate, or join the team, we would like to hear from you.
                 </p>
 
