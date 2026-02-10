@@ -71,13 +71,14 @@ const HeroSection = () => {
           transition={{ duration: 0.9, ease, delay: 0.5 }}
           className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-400 text-[#0a0a0a] tracking-tight mb-2"
         >
-          Bodhan<span className="text-[#ff6207]">.</span><span className="text-[#ff6207]">AI</span>
+          Bodhan
+          <span className="text-[var(--brand-orange)]">.AI</span>
         </Motion.h1>
 
         <Motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease, delay: 0.8 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.8 }}
           className="text-[#525252] text-xs md:text-sm lg:text-base tracking-[0.15em] uppercase font-medium mb-10 text-center"
         >
           Centre of Excellence in AI for Education
@@ -94,7 +95,7 @@ const HeroSection = () => {
         </Motion.button>
 
       </div>
-      <Motion.img src="https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?width=1920&amp;height=676" srcset="https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?scale-down-to=512&amp;width=1920&amp;height=676 512w,https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?scale-down-to=1024&amp;width=1920&amp;height=676 1024w,https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?width=1920&amp;height=676 1920w" alt="" style={{ height: arcHeight }} className="w-full relative flex-shrink-0"></Motion.img>
+      <Motion.img src="https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?width=1920&amp;height=676" srcset="https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?scale-down-to=512&amp;width=1920&amp;height=676 512w,https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?scale-down-to=1024&amp;width=1920&amp;height=676 1024w,https://framerusercontent.com/images/7JW5hiKTuIExiSp00XQILMZFt8.png?width=1920&amp;height=676 1920w" alt="" style={{ height: arcHeight }} fetchPriority="high" className="w-full relative flex-shrink-0"></Motion.img>
     </div>
   );
 };

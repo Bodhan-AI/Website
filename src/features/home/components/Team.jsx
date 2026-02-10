@@ -10,8 +10,8 @@ import karthikRamanImg from '../../../assets/Karthik Raman.jpg';
 import nandanImg from '../../../assets/Nandan Sudarsanam.jpg';
 import neethiImg from '../../../assets/S Neethi.jpg';
 import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
-import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
-import manuImg from '../../../assets/prof-manu.jpg';
+import VeezhinathanImg from '../../../assets/prof-kamakoti.webp';
+import manuImg from '../../../assets/prof-manu.avif';
 import { Linkedin } from 'lucide-react';
 
 const Team = () => {

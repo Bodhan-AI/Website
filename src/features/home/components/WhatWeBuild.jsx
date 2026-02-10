@@ -3,10 +3,10 @@ import Container from './Container';
 import SectionHeading from './SectionHeading';
 import Card from './Card';
 
-import team1 from '../../../assets/team1.png';
-import team2 from '../../../assets/team2.png';
-import team3 from '../../../assets/team3.png';
-import team4 from '../../../assets/team4.png';
+import team1 from '../../../assets/team1.webp';
+import team2 from '../../../assets/team2.webp';
+import team3 from '../../../assets/team3.webp';
+import team4 from '../../../assets/team4.webp';
 
 const pillars = [
     {
@@ -55,14 +55,14 @@ const WhatWeBuild = () => {
             />
 
             {/* Card Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8 lg:gap-8 xl:gap-11 items-stretch">
                 {pillars.map((item, index) => (
                     <Card
                         key={index}
                         title={item.title}
                         description={item.description}
                         image={item.image}
-                        className="aspect-[3/5] md:aspect-[4/5] max-w-sm mx-auto w-full md:max-w-none"
+                        className="max-w-sm mx-auto w-full md:max-w-none"
                         panelClassName="p-4"
                         descriptionClassName="mt-2 text-xs leading-5 text-gray-600 space-y-2"
                     />
