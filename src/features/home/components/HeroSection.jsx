@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion as Motion, useScroll, useTransform } from "motion/react";
-import { Link } from 'react-router-dom';
 
 const ease = [0.25, 0.46, 0.45, 0.94];
 
+const getResponsiveValues = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  return {
+    maxScroll: isMobile ? 300 : 500,
+    heights: isMobile ? ['4rem', '6rem'] : ['6rem', '20rem'],
+  };
+};
+
 const HeroSection = () => {
   const { scrollY } = useScroll();
-  const [maxScroll, setMaxScroll] = useState(500);
-  const [heights, setHeights] = useState(['6rem', '20rem']);
+  const [{ maxScroll, heights }, setValues] = useState(getResponsiveValues);
 
   useEffect(() => {
-    const updateResponsiveValues = () => {
-      if (window.innerWidth < 768) {
-        setMaxScroll(300);
-        setHeights(['4rem', '6rem']);
-      } else {
-        setMaxScroll(500);
-        setHeights(['6rem', '20rem']);
-      }
-    };
-
-    updateResponsiveValues();
-    window.addEventListener('resize', updateResponsiveValues);
-    return () => window.removeEventListener('resize', updateResponsiveValues);
+    const onResize = () => setValues(getResponsiveValues());
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   const arcHeight = useTransform(scrollY, [0, maxScroll], heights);
@@ -69,7 +65,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-400 text-[#0a0a0a] tracking-tight mb-2"
+          className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-400 text-[#0a0a0a] tracking-tight mb-2 font-[Poppins]"
         >
           Bodhan<span className="text-[#ff6207]">.</span><span className="text-[#ff6207]">AI</span>
         </Motion.h1>
