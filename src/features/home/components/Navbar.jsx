@@ -9,8 +9,6 @@ import LogoWithIcon from '../../../assets/Logo-with-icon.png';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-
-
     // Animation variants
     const linkVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -48,12 +46,12 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className="sticky top-0 z-50 w-full bg-orange-50 transition-spring"
+            className="sticky top-0 z-50 w-full bg-[var(--navbar-bg)] transition-spring"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 md:py-4 lg:py-7 flex items-center justify-center lg:justify-between relative">
+            <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-center lg:justify-between relative">
 
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">
@@ -95,13 +93,13 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Hamburger Button */}
-                <div className="lg:hidden absolute right-0 flex items-center h-full">
+                <div className="lg:hidden absolute right-6">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="text-[var(--text-primary)] hover:text-orange-500 transition-colors p-2"
                         aria-label="Toggle Menu"
                     >
-                        {isOpen ? <X size={24} className="sm:w-7 sm:h-7" /> : <Menu size={24} className="sm:w-7 sm:h-7" />}
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
             </div>
