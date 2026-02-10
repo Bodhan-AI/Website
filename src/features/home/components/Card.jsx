@@ -36,9 +36,9 @@ const Card = ({ title, description, image, className = "", panelClassName = "", 
                                 ))}
                             </ul>
                         ) : (
-                            <p className={`text-sm font-inter mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed ${image ? 'text-gray-600' : 'text-gray-600'} ${descriptionClassName}`}>
+                            <div className={`text-sm font-inter mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 leading-relaxed ${image ? 'text-gray-600' : 'text-gray-600'} ${descriptionClassName}`}>
                                 {description}
-                            </p>
+                            </div>
                         )}
                     </div>
                 </div>
