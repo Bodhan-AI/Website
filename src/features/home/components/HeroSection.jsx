@@ -71,7 +71,7 @@ const HeroSection = () => {
           transition={{ duration: 0.9, ease, delay: 0.5 }}
           className="text-5xl md:text-7xl lg:text-[6rem] leading-tight text-[#0a0a0a] tracking-tight mb-2 font-poppins"
         >
-          <span className="font-normal">Bodhan</span><span className="text-[#ff6207]">.</span><span className="font-extralight">AI</span>
+          <span className="font-normal">Bodhan</span><span className="text-[#ff6207]">.</span><span className="text-[#ff6207] font-extralight">AI</span>
         </Motion.h1>
 
         <Motion.p
