@@ -72,26 +72,7 @@ const HeroSection = () => {
           className="text-5xl md:text-7xl lg:text-[6rem] leading-tight font-400 text-[#0a0a0a] tracking-tight mb-2"
         >
           Bodhan
-          <Motion.span
-            className="text-[var(--brand-orange)] inline-block"
-            initial={false}
-            animate={{
-              y: [0, -18, 0],
-              scaleX: [1, 0.92, 1.08, 1],
-              scaleY: [1, 1.15, 0.85, 1]
-            }}
-            transition={{
-              duration: 0.8,
-              times: [0, 0.4, 1],
-              ease: ["easeOut", "easeIn"],
-              repeat: Infinity,
-              repeatDelay: 0.05
-            }}
-          >
-            .
-          </Motion.span>
-
-          <span className="text-[var(--brand-orange)]">AI</span>
+          <span className="text-[var(--brand-orange)]">.AI</span>
         </Motion.h1>
 
         <Motion.p
