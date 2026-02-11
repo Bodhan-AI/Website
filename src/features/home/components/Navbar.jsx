@@ -46,7 +46,7 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className="sticky top-0 z-50 w-full bg-[var(--navbar-bg)] transition-spring"
+            className="sticky top-0 z-50 w-full bg-[var(--navbar-bg)]"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -109,7 +109,7 @@ const Navbar = () => {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="lg:hidden overflow-hidden bg-[var(--navbar-bg)]/95 backdrop-blur-xl border-t border-[var(--text-primary)]/5"
+                className="lg:hidden overflow-hidden bg-[var(--navbar-bg)] border-t border-[var(--text-primary)]/5"
             >
                 <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
                     <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Home</Link>
