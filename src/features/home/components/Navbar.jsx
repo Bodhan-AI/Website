@@ -51,7 +51,7 @@ const Navbar = () => {
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto px-6 py-4 md:py-6 flex items-center justify-center lg:justify-between relative">
+            <div className="max-w-7xl mx-auto px-6 py-2 md:py-6 flex items-center justify-center lg:justify-between relative">
 
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">
@@ -109,9 +109,9 @@ const Navbar = () => {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="lg:hidden overflow-hidden bg-[var(--navbar-bg)] border-t border-[var(--text-primary)]/5"
+                className="lg:hidden overflow-hidden bg-[var(--navbar-bg)] border-t border-[var(--text-primary)]/5 absolute top-full left-0 w-full z-50 shadow-lg"
             >
-                <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
+                <div className="flex flex-col space-y-6 px-6 md:py-8 py-4 items-center text-lg font-medium">
                     <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Home</Link>
                     <Link to="/" state={{ scrollTo: 'vision-mission' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Vision</Link>
                     <a href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</a>

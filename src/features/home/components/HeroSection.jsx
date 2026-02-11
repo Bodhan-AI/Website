@@ -6,14 +6,15 @@ const ease = [0.25, 0.46, 0.45, 0.94];
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
-  const [maxScroll, setMaxScroll] = useState(500);
-  const [heights, setHeights] = useState(['6rem', '20rem']);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const [maxScroll, setMaxScroll] = useState(isMobile ? 300 : 500);
+  const [heights, setHeights] = useState(isMobile ? ['1.5rem', '4rem'] : ['6rem', '20rem']);
 
   useEffect(() => {
     const updateResponsiveValues = () => {
       if (window.innerWidth < 768) {
         setMaxScroll(300);
-        setHeights(['4rem', '6rem']);
+        setHeights(['1.5rem', '4rem']);
       } else {
         setMaxScroll(500);
         setHeights(['6rem', '20rem']);

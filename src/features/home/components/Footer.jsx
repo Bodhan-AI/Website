@@ -28,12 +28,12 @@ const Footer = () => {
                 {/* Top Section: Logo and Social Icons */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-2">
                     {/* Left: Logo */}
-                    <div className="text-2xl font-400 text-gray-900 mb-6 md:mb-0">
+                    <div className="text-2xl font-400 text-gray-900 mb-2 md:mb-0">
                         Bodhan<span className="text-[var(--text-orange-500)]">.AI</span>
                     </div>
 
                     {/* Right: Social Icons */}
-                    <div className="flex space-x-3">
+                    <div className="flex space-x-3 pb-2 md:pb-0">
                         {socialLinks.map(({ icon: Icon, href, label, hoverColor, isCustom }) => (
                             <a
                                 key={label}
