@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 
 import Icon from '../../../assets/Icon.png';
 import LogoWithIcon from '../../../assets/Logo-with-icon.png';
+import MoELogo from '../../../assets/Ministry_of_Education_India.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ const Navbar = () => {
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto px-6 py-2 md:py-6 flex items-center justify-center lg:justify-between relative">
+            <div className="max-w-7xl mx-auto px-6 py-4 md:py-8 flex items-center justify-center lg:justify-between relative">
 
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">
@@ -71,12 +72,15 @@ const Navbar = () => {
                     className={`flex flex-shrink-0 items-center justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2`}
                     variants={logoVariants}
                 >
-                    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center space-x-2">
-                        {/* Mobile: Only Icon */}
-                        <img src={Icon} alt="Bodhan Icon" className="h-14 w-auto object-contain md:hidden" />
-                        {/* Tablet/Desktop: Logo with Icon */}
-                        <img src={Icon} alt="Bodhan Logo" className="h-18 w-auto object-contain hidden md:block" />
-                    </Link>
+                    <div className="flex items-center gap-2 md:gap-3">
+                        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                            <img src={MoELogo} alt="Ministry of Education" className="h-14 md:h-18 w-auto object-contain" />
+                        </Link>
+                        <div className="w-px h-10 md:h-14 bg-[var(--text-primary)]/20" />
+                        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                            <img src={Icon} alt="Bodhan Icon" className="h-16 md:h-20 w-auto object-contain" />
+                        </Link>
+                    </div>
                 </motion.div>
 
                 {/* Desktop Right Links */}
