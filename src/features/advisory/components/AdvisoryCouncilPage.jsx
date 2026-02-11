@@ -3,13 +3,24 @@ import { motion } from 'motion/react';
 import Navbar from '../../home/components/Navbar';
 import Footer from '../../home/components/Footer';
 
+import sethuramanImg from '../../../assets/Sethuraman_Panchanathan.jpg';
 import jeffImg from '../../../assets/Jeff Ullman.jpg';
 import svethaImg from '../../../assets/svetha.jpeg';
 import ashokImg from '../../../assets/Ashok Goel.png';
 import mohanImg from '../../../assets/Mohan_Photo.jpg';
 import babakImg from '../../../assets/Babak-Hojjat.png';
+import davidImg from '../../../assets/David Poole.jpg';
 
 const advisoryMembers = [
+    {
+        name: "Prof. Sethuraman Panchanathan",
+        role: "Chairman, Bodhan AI International Advisory Council",
+        image: sethuramanImg,
+        bio: [
+            "Dr. Sethuraman \"Panch\" Panchanathan is a distinguished computer scientist, engineer, and academic leader. He is best known for serving as the 15th Director of the U.S. National Science Foundation (NSF), a role he held from June 2020 until April 2025.",
+            "Prof. Panchanathan is also serving as Foundation Chair in the School of Computing and Augmented Intelligence, Arizona State University."
+        ]
+    },
     {
         name: "Prof. Jeff Ullman",
         role: "Professor Emeritus, Stanford University",
@@ -18,6 +29,16 @@ const advisoryMembers = [
             "Jeff Ullman is the Stanford W. Ascherman Professor of Engineering (Emeritus) in the Department of Computer Science at Stanford and CEO of Gradiance Corp. He received the B.S. degree from Columbia University in 1963 and the PhD from Princeton in 1966. Prior to his appointment at Stanford in 1979, he was a member of the technical staff of Bell Laboratories from 1966-1969, and on the faculty of Princeton University between 1969 and 1979. From 1990-1994, he was chair of the Stanford Computer Science Department.",
             "Ullman was elected to the National Academy of Engineering in 1989, the American Academy of Arts and Sciences in 2012, the National Academy of Science in 2020, and has held Guggenheim and Einstein Fellowships. He has received the Sigmod Contributions Award (1996), the ACM Karl V. Karlstrom Outstanding Educator Award (1998), the Knuth Prize (2000), the Sigmod E. F. Codd Innovations award (2006), the IEEE von Neumann medal (2010), the NEC C&C Foundation Prize (2017), and the ACM A.M. Turing Award (2020).",
             "Prof. Ullman is the author of 16 books, including books on database systems, data mining, compilers, automata theory, and algorithms."
+        ]
+    },
+    {
+        name: "Prof. David Poole",
+        role: "Professor Emeritus, University of British Columbia",
+        image: davidImg,
+        bio: [
+            "Prof. David Poole is a Professor Emeritus of Computer Science at the University of British Columbia. He is known for his work on combining logic and probability, probabilistic inference, relational probabilistic models, statistical relational AI and semantic science.",
+            "Prof. Poole is a co-author of two AI textbooks (Cambridge University Press, 2010, 2nd edition 2017, 3rd edition 2023, and Oxford University Press, 1998), and co-author of \"Statistical Relational Artificial Intelligence: Logic, Probability, and Computation\" (Morgan & Claypool 2016), and co-editor of \"Introduction to Lifted Inference\" (MIT Press 2021).",
+            "He is a former chair of the Association for Uncertainty in Artificial Intelligence, the winner of the Canadian AI Association (CAIAC) 2013 Lifetime Achievement Award, and a co-winner of 2026 AAAI/EAAI Patrick Henry Winston Outstanding Educator Award. He is a Fellow of the Association for the Advancement of Artificial Intelligence (AAAI) and CAIAC."
         ]
     },
     {

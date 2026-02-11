@@ -10,34 +10,74 @@ import team4 from '../../../assets/team4.png';
 
 const pillars = [
     {
-        title: "Personalised Learning for Students",
-        description: [
-            "Development of adaptive learning platforms that tailor content, pacing, and difficulty to each learner’s profile, performance, and context.",
-            "Use of AI to bridge learning gaps through real‑time feedback, recommendations, and remedial pathways."
+        title: "System Capabilities",
+        description: (
+            <>
+                <strong>Learning, Tutoring, Practice, and Assessment as a Unified System</strong>
+                <br /><br />
+                Bodhan will provide a set of interoperable system capabilities that support learning, practice, tutoring, and assessment across the classroom lifecycle. These capabilities will be designed to work together, rather than as standalone applications, enabling coherent learner journeys and consistent teacher workflows.
+            </>
+        ),
+        bullets: [
+            "Foundational literacy and numeracy diagnostics and remediation",
+            "Just-in-time conversational academic support",
+            "Curriculum-aligned instructional content with embedded interaction",
+            "Adaptive practice and remediation driven by learner data",
+            "Automated assessment and structured teacher feedback",
         ],
         image: team1
     },
     {
-        title: "Tools to Enhance Productivity for Teachers",
-        description: [
-            "Assessment and analytics AI‑driven assessment tools for automated grading, formative assessment, and diagnostic testing at scale.",
-            "Learning analytics for teachers, institutions, and policymakers to track outcomes, identify at‑risk learners, and optimize interventions."
+        title: "Foundational AI Assets",
+        description: (
+            <>
+                <strong>Foundational AI Models for Education</strong>
+                <br /><br />
+                At the core of the system would be foundational AI models purpose-built for educational settings. These models will be developed and owned in-house, trained on classroom-grounded data, and optimized for pedagogy rather than general consumer use.
+            </>
+        ),
+        bullets: [
+            "Child speech diagnostics for fluency, pronunciation, and prosody",
+            "Education- and STEM-aware speech recognition across Indian languages",
+            "Handwritten and printed educational OCR, including mathematics and diagrams",
+            "Pedagogy-aligned language models for explanation, tutoring, and question generation",
+            "Empathetic text-to-speech designed for children",
         ],
         image: team2
     },
     {
-        title: "Curriculum and Content",
-        description: [
-            "Smart content generation and curation, including AI‑assisted creation of question banks, micro‑content, simulations, and multilingual materials in line with NEP 2020.",
-            "Support for curriculum design that embeds AI literacy and high‑tech skills, aligned with emerging industry needs."
+        title: "Infrastructure",
+        description: (
+            <>
+                <strong>Infrastructure That Turns AI into a Public Utility</strong>
+                <br /><br />
+                Bodhan will also build the scalable infrastructure required to operate AI systems reliably in real classrooms at scale. This layer abstracts complexity away from states and partners, allowing easy deployments across states.
+            </>
+        ),
+        bullets: [
+            "Training and fine-tuning pipelines for multilingual AI models",
+            "Low-latency, voice-first inference and batch processing",
+            "Unified data fabric with versioning, lineage, and access controls",
+            "Compute abstraction across cloud, on-premise, and edge environments",
+            "Orchestration of multi-step AI workflows",
         ],
         image: team3
     },
     {
-        title: "Digital and Virtual Learning Environments",
-        description: [
-            "Virtual learning environments, intelligent tutoring systems, and AI‑powered classroom tools that augment teachers rather than replace them.",
-            "Integration with broader digital public infrastructure and EdTech ecosystems to ensure interoperability and reach."
+        title: "Data & Deployment",
+        description: (
+            <>
+                <strong>Data, Evidence, and Public Deployment</strong>
+                <br /><br />
+                All AI capabilities are grounded in large-scale, purpose-built educational data and deployed through formal public partnerships. Schools are treated as long-running system testbeds, not short-term pilots.
+            </>
+        ),
+        bullets: [
+            "Classroom-grounded speech, handwriting, and interaction data",
+            "Multilingual and multi-dialect coverage",
+            "Continuous feedback loops from live deployments",
+            "Rigorous impact evaluation and evidence generation",
+            "Capacity building for teachers and administrators",
         ],
         image: team4
     }
@@ -47,9 +87,9 @@ const WhatWeBuild = () => {
     return (
         <Container className="py-20 text-center">
             <SectionHeading
-                title="What We Build"
-                highlightWord="Build"
-                subtitle="Bodhan's work is organised around four interconnected pillars, each designed to strengthen a different layer of India's learning ecosystem."
+                title="What We Are Building"
+                highlightWord="Building"
+                subtitle="Bodhan is a foundational AI infrastructure for education designed to be adopted, extended, and governed within public systems."
                 className="mb-8"
                 parallax={true}
             />
@@ -61,8 +101,9 @@ const WhatWeBuild = () => {
                         key={index}
                         title={item.title}
                         description={item.description}
+                        bullets={item.bullets}
                         image={item.image}
-                        className="aspect-[3/5] md:aspect-[4/5] max-w-sm mx-auto w-full md:max-w-none"
+                        className="aspect-[3/5] md:aspect-[3/5] max-w-sm mx-auto w-full md:max-w-none"
                         panelClassName="p-4"
                         descriptionClassName="mt-2 text-xs leading-5 text-gray-600 space-y-2"
                     />

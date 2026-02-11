@@ -51,7 +51,7 @@ const Navbar = () => {
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center lg:justify-between relative">
+            <div className="max-w-7xl mx-auto px-6 py-4 md:py-6 flex items-center justify-center lg:justify-between relative">
 
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">

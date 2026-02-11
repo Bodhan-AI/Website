@@ -12,7 +12,8 @@ import neethiImg from '../../../assets/S Neethi.jpg';
 import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
 import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
 import manuImg from '../../../assets/prof-manu.jpg';
-import { Linkedin } from 'lucide-react';
+import sumanImg from '../../../assets/Suman_Kundu.jpg';
+import { Linkedin, User } from 'lucide-react';
 
 const Team = () => {
     const boardMembers = [
@@ -36,7 +37,7 @@ const Team = () => {
         },
     ];
 
-    const teamMembers = [
+    const row1 = [
         {
             name: "Prof. Mitesh Khapra",
             role: "Professor, IIT Madras",
@@ -45,32 +46,47 @@ const Team = () => {
         },
         {
             name: "Dr. S Neethi",
-            role: "Adjunct Faculty, IIT Madras",
+            role: "Professor of Practice, IIT Madras",
             linkedin: "https://www.linkedin.com/in/s-neethi/",
             image: neethiImg
         },
         {
             name: "Prof. Karthik Raman",
-            role: "Professor IIT Madras",
+            role: "Professor, IIT Madras",
             linkedin: "https://www.linkedin.com/in/ramankarthik/",
             image: karthikRamanImg
         },
         {
             name: "Prof. Nandan Sudarsanam",
-            role: "Professor IIT Madras",
+            role: "Professor, IIT Madras",
             linkedin: "https://www.linkedin.com/in/nandan-sudarsanam-67359b6/",
             image: nandanImg
+        },
+    ];
+
+    const row2 = [
+        {
+            name: "Dr. Suman Kundu",
+            role: "Assistant Professor, IIT Madras",
+            linkedin: "https://www.linkedin.com/in/drskundu/",
+            image: sumanImg
         },
         {
             name: "Mr. Karthik Mahadevan Mohanakrishnan",
             role: "COO, Bodhan AI",
             linkedin: "https://www.linkedin.com/in/karthikmaha/",
             image: karthikMahaImg
-        }
+        },
+        {
+            name: "Mr. Ganesh",
+            role: "VP - Engineering, Bodhan AI",
+            linkedin: "",
+            image: null
+        },
     ];
 
     return (
-        <Container className="pt-20 pb-10 scroll-mt-32" id="team">
+        <Container className="pt-0 md:pt-20 pb-10 scroll-mt-32" id="team">
             <SectionHeading
                 title="Our People"
                 highlightWord="People"
@@ -99,37 +115,50 @@ const Team = () => {
             <div className="mb-24">
                 <h3 className="text-3xl font-inter font-semibold text-center mb-12 text-[#1A1A1A]">Leadership</h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                    {teamMembers.map((member, index) => (
-                        <div key={index} className="flex flex-col items-center text-center group">
-                            {/* Circular Image */}
+                {/* Row 1: 4 members */}
+                <div className="flex justify-center gap-24 flex-wrap mb-16">
+                    {row1.map((member, index) => (
+                        <div key={index} className="flex flex-col items-center text-center group w-40">
                             <div className="w-40 h-40 rounded-full bg-gray-100 mb-6 relative overflow-hidden flex items-center justify-center group-hover:ring-4 ring-orange-100 transition-all border border-gray-200">
                                 {member.image ? (
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
+                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                                 ) : (
-                                    <span className="text-4xl text-gray-500 font-semibold">
-                                        {member.name.charAt(0)}
-                                    </span>
+                                    <User size={48} className="text-gray-400" />
                                 )}
                             </div>
+                            <h3 className="text-lg font-100 text-gray-900 mb-1 leading-tight">{member.name}</h3>
+                            {member.role && (
+                                <p className="text-gray-500 text-sm mb-1">{member.role}</p>
+                            )}
+                            {member.linkedin && (
+                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors mt-2">
+                                    <Linkedin size={16} fill="currentColor" strokeWidth={0} />
+                                </a>
+                            )}
+                        </div>
+                    ))}
+                </div>
 
-                            <h3 className="text-lg font-100 text-gray-900 mb-1 leading-tight">
-                                {member.name}
-                            </h3>
-                            {/* <p className="text-gray-600 text-sm mb-3 h-auto">
-                                {member.role}
-                            </p> */}
-
-                            <a
-                                href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors mt-2"
-                            >
-                                <Linkedin size={16} fill="currentColor" strokeWidth={0} />
-                            </a>
+                {/* Row 2: 3 members */}
+                <div className="flex justify-center gap-24 flex-wrap">
+                    {row2.map((member, index) => (
+                        <div key={index} className="flex flex-col items-center text-center group w-40">
+                            <div className="w-40 h-40 rounded-full bg-gray-100 mb-6 relative overflow-hidden flex items-center justify-center group-hover:ring-4 ring-orange-100 transition-all border border-gray-200">
+                                {member.image ? (
+                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                ) : (
+                                    <User size={48} className="text-gray-400" />
+                                )}
+                            </div>
+                            <h3 className="text-lg font-100 text-gray-900 mb-1 leading-tight">{member.name}</h3>
+                            {member.role && (
+                                <p className="text-gray-500 text-sm mb-1">{member.role}</p>
+                            )}
+                            {member.linkedin && (
+                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors mt-2">
+                                    <Linkedin size={16} fill="currentColor" strokeWidth={0} />
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>
