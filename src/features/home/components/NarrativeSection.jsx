@@ -4,26 +4,21 @@ import React from 'react';
 
 const NarrativeSection = () => {
     return (
-        <div id="narrative" className="w-full bg-[var(--bg-black-900)] text-white py-24 px-6 relative overflow-hidden ">
+        <div id="narrative" className="w-full bg-[var(--bg-black-900)] text-white pt-24 px-6 relative overflow-hidden ">
             <div className=" absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-32 bg-gradient-to-b from-[var(--text-orange-500)]/20 to-transparent blur-3xl opacity-50 pointer-events-none"></div>
 
-            <div className="max-w-5xl mx-auto flex flex-col items-center text-center z-10 relative p-10">
+            <div className="max-w-5xl mx-auto flex flex-col items-center text-center z-10 relative px-2 py-6 md:p-10">
                 {/* Headline */}
-                <h2 className="text-5xl md:text-6xl leading-tight tracking-tight mb-8">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-6 md:mb-8">
                     Awakening how India
                     <br className="hidden md:block" />
                     <span className="text-[var(--text-orange-500)]"> learns</span>, <span className="text-[var(--text-orange-500)]">teaches</span>, and <span className="text-[var(--text-orange-500)]">grows</span>
                 </h2>
 
-                {/* Paragraph 1 */}
-                <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-8 max-w-4xl">
-                    Bodhan AI is the Centre of Excellence in Artificial Intelligence for Education, incubated by IIT Madras as a Section 8 Company. Supported by the Ministry of Education, it is a flagship national initiative advancing AI driven education and skilling. Guided by the vision of Make AI in India, Make AI Work for India, Bodhan AI is building critical public digital infrastructure to transform learning, teaching, assessment, and talent development at scale, staying true to its Sanskrit meaning of Awakening or Enlightenment.
+                <p className="text-[var(--color-14)] font-inter text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 max-w-4xl">
+                    <span className="font-semibold text-white">Bodhan AI - The Centre of Excellence in AI for Education</span> is an IIT Madras-incubated initiative supported by the Ministry of Education, building the <span className="font-semibold text-white">Bharat EduAI Stack as a sovereign Digital Public Infrastructure</span> . We are building sovereign, context-aware AI tools for learning and teaching, ensuring no demographic is left behind in India's digital transformation.
                 </p>
 
-                {/* Paragraph 2 */}
-                <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-8 max-w-4xl">
-                    India’s education landscape is unlike any other. Millions of learners, hundreds of languages, and deeply varied social and regional contexts demand systems that can adapt without excluding and scale without flattening diversity. Bodhan AI exists to design, build, and steward the open Bharat EduAI Stack as a sovereign Digital Public Infrastructure, enabling inclusive, multilingual, and context aware AI capabilities for learning, teaching, assessment, and guidance across every district, institution, and demographic in the country.
-                </p>
 
                 {/* Tagline */}
                 {/* <p className="text-[var(--color-14)] font-inter text-xl leading-relaxed mb-12 max-w-4xl">

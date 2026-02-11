@@ -13,7 +13,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
 
   --brand-blue: #314685;
   --brand-orange: #FF6600;
@@ -46,7 +45,7 @@
   /* --color-26 is white */
   --off-black: #101010;
   /* New Navbar Colors */
-  --navbar-bg: #F7F6F0;
+  --navbar-bg: #fff7ed;
   --text-primary: #2E3238;
   --text-hover: #FA5C40;
 
@@ -66,6 +65,7 @@
 }
 
 @theme {
+  --font-syne: "Syne", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
@@ -84,6 +84,9 @@ h3 {
 }
 
 /* Utility Classes */
+.font-syne {
+  font-family: var(--font-syne);
+}
 .transition-spring {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -197,12 +200,13 @@ body {
   transform: translate(-50%, -50%);
   filter: blur(100px);
   aspect-ratio: 1;
-  height: 800px;
-  border-radius: 500px;
-  width: 800px;
-  overflow: visible;
+  height: 600px;
+  border-radius: 400px;
+  width: 600px;
+  overflow: hidden;
   opacity: 1;
   will-change: transform;
+  contain: strict;
   animation: rotate-continuous 10s linear infinite;
 }
 
@@ -213,13 +217,14 @@ body {
   transform: translate(-50%, -50%);
   filter: blur(100px);
   aspect-ratio: 1;
-  height: 800px;
+  height: 600px;
   mix-blend-mode: overlay;
-  border-radius: 500px;
-  width: 800px;
-  overflow: visible;
+  border-radius: 400px;
+  width: 600px;
+  overflow: hidden;
   opacity: 1;
   will-change: transform;
+  contain: strict;
   animation: rotate-continuous 10s linear infinite;
 }
 

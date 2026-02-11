@@ -9,8 +9,6 @@ import LogoWithIcon from '../../../assets/Logo-with-icon.png';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-
-
     // Animation variants
     const linkVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -48,12 +46,12 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className="sticky top-0 z-50 w-full bg-orange-50 transition-spring"
+            className="sticky top-0 z-50 w-full bg-[var(--navbar-bg)] transition-spring"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto px-6 py-3 sm:py-4 md:py-4 lg:py-7 flex items-center justify-center lg:justify-between relative">
+            <div className="max-w-7xl mx-auto px-6 py-4 lg:py-8 flex items-center justify-center lg:justify-between relative">
 
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">
@@ -61,10 +59,10 @@ const Navbar = () => {
                         <Link to="/" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Home</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#vision-mission" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Vision</Link>
+                        <Link to="/" state={{ scrollTo: 'vision-mission' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Vision</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</Link>
+                        <a href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</a>
                     </motion.div>
                 </div>
 
@@ -84,24 +82,24 @@ const Navbar = () => {
                 {/* Desktop Right Links */}
                 <div className="hidden lg:flex space-x-12">
                     <motion.div variants={linkVariants}>
-                        <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team</Link>
+                        <Link to="/" state={{ scrollTo: 'team' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
                         <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Careers</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
-                        <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Contact</Link>
+                        <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
                     </motion.div>
                 </div>
 
                 {/* Mobile Hamburger Button */}
-                <div className="lg:hidden absolute right-0 flex items-center h-full">
+                <div className="lg:hidden absolute right-6">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="text-[var(--text-primary)] hover:text-orange-500 transition-colors p-2"
                         aria-label="Toggle Menu"
                     >
-                        {isOpen ? <X size={24} className="sm:w-7 sm:h-7" /> : <Menu size={24} className="sm:w-7 sm:h-7" />}
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
             </div>
@@ -115,11 +113,11 @@ const Navbar = () => {
             >
                 <div className="flex flex-col space-y-6 px-6 py-8 items-center text-lg font-medium">
                     <Link to="/" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Home</Link>
-                    <Link to="/#vision-mission" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Vision</Link>
-                    <Link to="/#research" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</Link>
-                    <Link to="/#team" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Team</Link>
+                    <Link to="/" state={{ scrollTo: 'vision-mission' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Vision</Link>
+                    <a href="https://safikhansoofiyani.github.io/bodhan-ai-research/#/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Research</a>
+                    <Link to="/" state={{ scrollTo: 'team' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Team</Link>
                     <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Careers</Link>
-                    <Link to="/#careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+                    <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Contact</Link>
                 </div>
             </motion.div>
         </motion.nav>

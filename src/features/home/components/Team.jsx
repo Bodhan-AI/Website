@@ -10,8 +10,8 @@ import karthikRamanImg from '../../../assets/Karthik Raman.jpg';
 import nandanImg from '../../../assets/Nandan Sudarsanam.jpg';
 import neethiImg from '../../../assets/S Neethi.jpg';
 import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
-import VeezhinathanImg from '../../../assets/prof-kamakoti.webp';
-import manuImg from '../../../assets/prof-manu.avif';
+import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
+import manuImg from '../../../assets/prof-manu.jpg';
 import { Linkedin } from 'lucide-react';
 
 const Team = () => {
@@ -70,7 +70,7 @@ const Team = () => {
     ];
 
     return (
-        <Container className="pt-20 pb-10 scroll-mt-32" id="team">
+        <Container className="pt-0 md:pt-20 pb-10 scroll-mt-32" id="team">
             <SectionHeading
                 title="Our People"
                 highlightWord="People"
@@ -136,7 +136,7 @@ const Team = () => {
             </div>
 
             {/* Advisory Board Section */}
-            <div id="advisory" className="mb-10 scroll-mt-32 text-center">
+            <div id="advisory" className="mb-2 scroll-mt-32 text-center">
                 <h3 className="text-3xl font-bold mb-4 text-[#1A1A1A]">International Advisory Council</h3>
                 <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-8">
                     Distinguished global leaders guiding Bodhan AI's vision for transforming education through Artificial Intelligence.
