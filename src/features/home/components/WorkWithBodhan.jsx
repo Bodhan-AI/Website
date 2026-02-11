@@ -28,18 +28,18 @@ const WorkWithBodhan = () => {
                     Bodhan collaborates with governments, institutions, researchers, and practitioners committed to strengthening education through responsible AI. If you would like to engage, collaborate, or join the team, we would like to hear from you.
                 </p>
 
-                <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+                <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 relative z-10">
                     <Link
                         to="/contact"
                         onClick={() => window.scrollTo(0, 0)}
-                        className="px-8 py-4 rounded-xl font-medium text-lg transition-colors shadow-lg bg-[#1A1A1A] hover:bg-black text-white"
+                        className="px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium text-base md:text-lg transition-colors shadow-lg bg-[#1A1A1A] hover:bg-black text-white"
                     >
                         Contact Us
                     </Link>
                     <Link
                         to="/careers"
                         onClick={() => window.scrollTo(0, 0)}
-                        className="px-8 py-4 rounded-xl font-medium text-lg transition-colors shadow-lg bg-[var(--btn-join)] hover:opacity-80 transition-opacity border-none text-white"
+                        className="px-6 py-3 md:px-8 md:py-4 rounded-xl font-medium text-base md:text-lg transition-colors shadow-lg bg-[var(--btn-join)] hover:opacity-80 transition-opacity border-none text-white"
                     >
                         Join Us
                     </Link>
