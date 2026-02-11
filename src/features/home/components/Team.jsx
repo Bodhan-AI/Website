@@ -46,7 +46,7 @@ const Team = () => {
         },
         {
             name: "Dr. S Neethi",
-            role: "Adjunct Faculty, IIT Madras",
+            role: "Professor of Practice, IIT Madras",
             linkedin: "https://www.linkedin.com/in/s-neethi/",
             image: neethiImg
         },
@@ -79,7 +79,7 @@ const Team = () => {
         },
         {
             name: "Mr. Ganesh",
-            role: "",
+            role: "VP - Engineering, Bodhan AI",
             linkedin: "",
             image: null
         },
