@@ -88,7 +88,7 @@ h3 {
   font-family: var(--font-syne);
 }
 .transition-spring {
-  transition-property: all;
+  transition-property: color, background-color, border-color, opacity, box-shadow, transform;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-duration: 300ms;
 }
@@ -293,4 +293,20 @@ body {
   font-family: "Inter Display", sans-serif;
   font-weight: 500;
   line-height: 1em;
+}
+
+/* Mobile performance: reduce heavy blur/rotation effects */
+@media (max-width: 767px) {
+  .cta-blur-rotate-1,
+  .cta-blur-rotate-2 {
+    filter: blur(40px);
+    height: 300px;
+    width: 300px;
+    border-radius: 200px;
+    animation: none;
+  }
+
+  .cta-noise {
+    display: none;
+  }
 }
