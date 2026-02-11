@@ -128,7 +128,7 @@ const WhatWeBuild = () => {
                         <span className="text-gray-500 font-inter font-medium uppercase tracking-wide text-xs">Research Problems</span>
                     </div>
                     <div className="flex flex-col items-center md:border-l md:border-r border-gray-200">
-                        <span className="text-4xl font-inter font-bold text-[#FF6B35] mb-1">22</span>
+                        <span className="text-4xl font-inter font-bold text-[#FF6B35] mb-1">22+</span>
                         <span className="text-gray-500 font-inter font-medium uppercase tracking-wide text-xs">Indian Languages</span>
                     </div>
                     <div className="flex flex-col items-center">
