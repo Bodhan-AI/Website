@@ -14,7 +14,7 @@ import davidImg from '../../../assets/David Poole.jpg';
 const advisoryMembers = [
     {
         name: "Prof. Sethuraman Panchanathan",
-        role: "Chairman - Bodhan AI Advisory Council",
+        role: "Chairman, Bodhan AI International Advisory Council",
         image: sethuramanImg,
         bio: [
             "Dr. Sethuraman \"Panch\" Panchanathan is a distinguished computer scientist, engineer, and academic leader. He is best known for serving as the 15th Director of the U.S. National Science Foundation (NSF), a role he held from June 2020 until April 2025.",
