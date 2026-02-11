@@ -77,12 +77,6 @@ const Team = () => {
             linkedin: "https://www.linkedin.com/in/karthikmaha/",
             image: karthikMahaImg
         },
-        {
-            name: "Mr. Ganesh",
-            role: "VP - Engineering, Bodhan AI",
-            linkedin: "",
-            image: null
-        },
     ];
 
     return (
