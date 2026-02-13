@@ -13,6 +13,7 @@ import karthikMahaImg from '../../../assets/Karthik-Mahadevan.png';
 import VeezhinathanImg from '../../../assets/prof-kamakoti.png';
 import manuImg from '../../../assets/prof-manu.jpg';
 import sumanImg from '../../../assets/Suman_Kundu.jpg';
+import ganeshImg from '../../../assets/Ganesh-Krishnan.jpeg';
 import { Linkedin, User } from 'lucide-react';
 
 const Team = () => {
@@ -76,6 +77,11 @@ const Team = () => {
             role: "COO, Bodhan AI",
             linkedin: "https://www.linkedin.com/in/karthikmaha/",
             image: karthikMahaImg
+        },
+        {
+            name: "Mr. Ganesh",
+            role: "VP Engineering, Bodhan AI",
+            image: ganeshImg
         },
     ];
 
