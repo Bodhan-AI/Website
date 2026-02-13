@@ -81,6 +81,7 @@ const Team = () => {
         {
             name: "Mr. Ganesh Krishnan",
             role: "VP Engineering, Bodhan AI",
+            linkedin: "https://www.linkedin.com/in/ganesh-krishnan-6a8a93a/",
             image: ganeshImg
         },
     ];
