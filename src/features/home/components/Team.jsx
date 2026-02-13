@@ -79,7 +79,7 @@ const Team = () => {
             image: karthikMahaImg
         },
         {
-            name: "Mr. Ganesh",
+            name: "Mr. Ganesh Krishnan",
             role: "VP Engineering, Bodhan AI",
             image: ganeshImg
         },
