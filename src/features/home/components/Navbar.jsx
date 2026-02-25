@@ -57,13 +57,13 @@ const Navbar = () => {
                 {/* Desktop Left Links */}
                 <div className="hidden lg:flex space-x-12">
                     <motion.div variants={linkVariants}>
-                        <Link to="/" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Home</Link>
-                    </motion.div>
-                    <motion.div variants={linkVariants}>
                         <Link to="/" state={{ scrollTo: 'vision-mission' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Vision</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
                         <a href="https://research.bodhan.ai" target="_blank" rel="noopener noreferrer" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Research</a>
+                    </motion.div>
+                    <motion.div variants={linkVariants}>
+                        <Link to="/" state={{ scrollTo: 'team' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team</Link>
                     </motion.div>
                 </div>
 
@@ -86,13 +86,13 @@ const Navbar = () => {
                 {/* Desktop Right Links */}
                 <div className="hidden lg:flex space-x-12">
                     <motion.div variants={linkVariants}>
-                        <Link to="/" state={{ scrollTo: 'team' }} className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Team</Link>
-                    </motion.div>
-                    <motion.div variants={linkVariants}>
                         <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Careers</Link>
                     </motion.div>
                     <motion.div variants={linkVariants}>
                         <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
+                    </motion.div>
+                    <motion.div variants={linkVariants}>
+                        <Link to="/tenders" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Tenders</Link>
                     </motion.div>
                 </div>
 
@@ -122,6 +122,7 @@ const Navbar = () => {
                     <Link to="/" state={{ scrollTo: 'team' }} className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => setIsOpen(false)}>Team</Link>
                     <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Careers</Link>
                     <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Contact</Link>
+                    <Link to="/tenders" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Tenders</Link>
                 </div>
             </motion.div>
         </motion.nav>
