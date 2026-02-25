@@ -37,7 +37,7 @@ const tenders = [
     },
     {
         id: 'tender-003',
-        status: 'active',
+        status: 'closed',
         title: 'Office Space Lease – Chennai',
         description:
             'Bodhan AI had invited proposals from property owners / real estate agencies for leasing furnished office space (approximately 3,000–5,000 sq. ft.) in Chennai for a period of 2 years with an option to extend.',
