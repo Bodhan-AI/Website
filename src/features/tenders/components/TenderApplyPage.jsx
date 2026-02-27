@@ -361,9 +361,6 @@ const TenderApplyPage = () => {
                                     'Submit Bid'
                                 )}
                             </button>
-                            <p className="text-xs text-gray-400 text-center mt-3">
-                                Both Technical and Commercial bids will be uploaded to separate secure folders.
-                            </p>
                         </motion.div>
 
                     </form>
