@@ -285,7 +285,7 @@ const TenderApplyPage = () => {
                                     </label>
                                     <input
                                         id="phone"
-                                        type="tel"
+                                        type="text"
                                         placeholder="+91 98765 43210"
                                         value={form.phone}
                                         onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value.replace(/[^\d+\s()-]/g, '') }))}
