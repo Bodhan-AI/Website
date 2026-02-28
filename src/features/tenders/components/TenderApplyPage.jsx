@@ -14,13 +14,14 @@ const MAX_MB = 10;
 
 const ALLOWED_TYPES = {
     'application/pdf': 'PDF',
-    'application/msword': 'DOC',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'DOCX',
-    'application/vnd.ms-excel': 'XLS',
-    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'XLSX',
-    'text/csv': 'CSV',
+    // 'application/msword': 'DOC',
+    // 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'DOCX',
+    // 'application/vnd.ms-excel': 'XLS',
+    // 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'XLSX',
+    // 'text/csv': 'CSV',
 };
-const ACCEPT = '.pdf,.doc,.docx,.xls,.xlsx,.csv';
+// const ACCEPT = '.pdf,.doc,.docx,.xls,.xlsx,.csv';
+const ACCEPT = '.pdf';
 
 const toBase64 = (file) =>
     new Promise((resolve, reject) => {
@@ -47,7 +48,7 @@ const UploadZone = ({ accentColor, file, onFile, onClear, disabled, error }) => 
 
     const validate = (f) => {
         if (!f) return;
-        if (!ALLOWED_TYPES[f.type]) return alert('Accepted formats: PDF, DOC, DOCX, XLS, XLSX, CSV.');
+        if (!ALLOWED_TYPES[f.type]) return alert('Accepted formats: PDF');
         if (f.size > MAX_MB * 1024 * 1024) return alert(`File must be under ${MAX_MB} MB.`);
         onFile(f);
     };
@@ -100,7 +101,7 @@ const UploadZone = ({ accentColor, file, onFile, onClear, disabled, error }) => 
                         <p className="text-sm font-medium text-gray-700">
                             <span className="text-[var(--text-orange-500)]">Click to upload</span> or drag & drop
                         </p>
-                        <p className="text-xs text-gray-400 mt-0.5">PDF, DOCX, XLSX, CSV · Max {MAX_MB} MB</p>
+                        <p className="text-xs text-gray-400 mt-0.5">PDF · Max {MAX_MB} MB</p>
                     </div>
                     <input
                         ref={inputRef}
