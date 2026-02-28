@@ -18,7 +18,7 @@ export const tenders = [
         status: 'active',
         title: 'Data Annotation Services for Indic Languages',
         description:
-            'Expression of Interest (EoI) is invited from agencies / organisations with proven experience in linguistic data annotation for providing data annotation, transcription, and quality assurance services for 22 scheduled Indian languages across speech, text, and multimodal datasets.',
+            'Expression of Interest (EoI) is invited from agencies / organizations with proven experience in linguistic data annotation for providing data annotation, transcription, and quality assurance services for 22 scheduled Indian languages across speech, text, and multimodal datasets.',
         closingDate: '2026-04-15',
         closingTime: '15:00 IST',
         documents: [

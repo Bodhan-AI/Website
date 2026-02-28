@@ -262,7 +262,7 @@ const TendersPage = () => {
                             <span className="font-semibold">Important: </span>
                             Technical and Commercial bids must be submitted as separate documents.
                             Including any commercial details within the Technical bid, or combining both into a single document,
-                            may result in <span className="font-semibold">disqualification of the bid</span>.
+                            will result in <span className="font-semibold">disqualification of the bid</span>.
                         </p>
                     </div>
                 </motion.div>

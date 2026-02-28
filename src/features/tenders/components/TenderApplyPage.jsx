@@ -12,6 +12,16 @@ import { tenders } from '../data/tenders';
 const SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL;
 const MAX_MB = 10;
 
+const ALLOWED_TYPES = {
+    'application/pdf': 'PDF',
+    'application/msword': 'DOC',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'DOCX',
+    'application/vnd.ms-excel': 'XLS',
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'XLSX',
+    'text/csv': 'CSV',
+};
+const ACCEPT = '.pdf,.doc,.docx,.xls,.xlsx,.csv';
+
 const toBase64 = (file) =>
     new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -37,7 +47,7 @@ const UploadZone = ({ accentColor, file, onFile, onClear, disabled, error }) => 
 
     const validate = (f) => {
         if (!f) return;
-        if (f.type !== 'application/pdf') return alert('Only PDF files are accepted.');
+        if (!ALLOWED_TYPES[f.type]) return alert('Accepted formats: PDF, DOC, DOCX, XLS, XLSX, CSV.');
         if (f.size > MAX_MB * 1024 * 1024) return alert(`File must be under ${MAX_MB} MB.`);
         onFile(f);
     };
@@ -55,7 +65,7 @@ const UploadZone = ({ accentColor, file, onFile, onClear, disabled, error }) => 
                 <div className="flex items-center gap-3 px-5 py-4">
                     <span className={`flex flex-col items-center justify-center w-10 h-10 rounded-xl flex-shrink-0 gap-0.5 ${accentColor === 'blue' ? 'bg-blue-50 border border-blue-100' : 'bg-orange-50 border border-orange-100'}`}>
                         <FileText size={13} className={accentColor === 'blue' ? 'text-blue-500' : 'text-[var(--text-orange-500)]'} />
-                        <span className={`text-[7px] font-bold uppercase leading-none ${accentColor === 'blue' ? 'text-blue-500' : 'text-[var(--text-orange-500)]'}`}>PDF</span>
+                        <span className={`text-[7px] font-bold uppercase leading-none ${accentColor === 'blue' ? 'text-blue-500' : 'text-[var(--text-orange-500)]'}`}>{ALLOWED_TYPES[file.type] ?? 'FILE'}</span>
                     </span>
                     <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-[#1A1A1A] truncate">{file.name}</p>
@@ -90,12 +100,12 @@ const UploadZone = ({ accentColor, file, onFile, onClear, disabled, error }) => 
                         <p className="text-sm font-medium text-gray-700">
                             <span className="text-[var(--text-orange-500)]">Click to upload</span> or drag & drop
                         </p>
-                        <p className="text-xs text-gray-400 mt-0.5">PDF only · Max {MAX_MB} MB</p>
+                        <p className="text-xs text-gray-400 mt-0.5">PDF, DOCX, XLSX, CSV · Max {MAX_MB} MB</p>
                     </div>
                     <input
                         ref={inputRef}
                         type="file"
-                        accept=".pdf,application/pdf"
+                        accept={ACCEPT}
                         className="hidden"
                         onChange={(e) => validate(e.target.files[0])}
                         disabled={disabled}
@@ -186,8 +196,8 @@ const TenderApplyPage = () => {
                     contactName: form.contactName,
                     email: form.email,
                     phone: form.phone,
-                    technicalFile: { name: techFile.name, data: techData },
-                    commercialFile: { name: commFile.name, data: commData },
+                    technicalFile: { name: techFile.name, mimeType: techFile.type, data: techData },
+                    commercialFile: { name: commFile.name, mimeType: commFile.type, data: commData },
                 }),
             });
             const json = await res.json();
@@ -265,7 +275,7 @@ const TenderApplyPage = () => {
                                 <span className="font-semibold">Important: </span>
                                 Technical and Commercial bids must be uploaded as separate files below.
                                 Including commercial details in the Technical bid or merging both into one document
-                                may result in <span className="font-semibold">disqualification</span>.
+                                will result in <span className="font-semibold">disqualification</span>.
                             </p>
                         </div>
                     </motion.div>
@@ -276,7 +286,7 @@ const TenderApplyPage = () => {
                         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.15 }} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-5">
                             <h2 className="text-sm font-semibold text-[#1A1A1A] mb-4">Bidder Information</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {field('orgName', 'Organisation Name', 'text', 'e.g. Acme Technologies Pvt. Ltd.')}
+                                {field('orgName', 'Organization Name', 'text', 'e.g. Acme Technologies Pvt. Ltd.')}
                                 {field('contactName', 'Contact Person', 'text', 'Full name')}
                                 {field('email', 'Email Address', 'email', 'contact@example.com')}
                                 <div>
