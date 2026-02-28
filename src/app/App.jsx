@@ -5,6 +5,8 @@ import AI4BPage from '../features/ai4b/components/AI4BPage'
 import AdvisoryCouncilPage from '../features/advisory/components/AdvisoryCouncilPage'
 import CareersPage from '../features/careers/components/CareersPage'
 import ContactPage from '../features/contact/components/ContactPage'
+import TendersPage from '../features/tenders/components/TendersPage'
+import TenderApplyPage from '../features/tenders/components/TenderApplyPage'
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
       <Route path="/advisory-council" element={<AdvisoryCouncilPage />} />
       <Route path="/careers" element={<CareersPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/tenders" element={<TendersPage />} />
+      <Route path="/tenders/apply/:tenderId" element={<TenderApplyPage />} />
     </Routes>
   )
 }
