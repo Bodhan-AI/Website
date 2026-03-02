@@ -8,7 +8,7 @@ const APPLY_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfTqBrU9bQVcrkCdpeRd
 
 const jobPostings = [
     {
-        title: 'VP of Research – Sovereign AI for Education',
+        title: 'VP of Research',
         experience: 'PhD + 8+ years',
         about: "Lead Bodhan's sovereign AI research strategy across speech, language, multimodal AI, and literacy diagnostics. Bridge cutting-edge AI research with real-world classroom deployment—making solutions accessible, affordable, and impactful for underserved populations.",
         responsibilities: [
@@ -35,7 +35,7 @@ const jobPostings = [
         ],
     },
     {
-        title: 'Principal Scientist – Sovereign AI for Education',
+        title: 'Principal Scientist',
         experience: 'PhD/MS + 4+ years',
         about: "Lead advanced research initiatives across speech, language, and multimodal AI tailored for education. Drive hands-on model innovation in ASR, ORF, LLMs, TTS, and OCR—with a focus on multilingual, low-resource, and real-world school deployments.",
         responsibilities: [
