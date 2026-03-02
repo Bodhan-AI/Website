@@ -381,7 +381,7 @@ const JobCard = ({ job, index }) => {
                             {job.experience}
                         </span>
                     </div>
-                    <p className="text-gray-600 text-sm mt-3 leading-relaxed line-clamp-2 md:line-clamp-1">
+                    <p className={`text-gray-600 text-sm mt-3 leading-relaxed ${expanded ? '' : 'line-clamp-2 md:line-clamp-1'}`}>
                         {job.about}
                     </p>
                 </div>

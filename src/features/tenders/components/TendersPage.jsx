@@ -138,26 +138,30 @@ const TenderCard = ({ tender, index, onPreview }) => {
                             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Documents</p>
                             <ul className="space-y-2">
                                 {tender.documents.map((doc, i) => (
-                                    <li key={i} className="flex items-center gap-3 bg-gray-50 rounded-xl px-3 py-2.5">
-                                        <span className="flex flex-col items-center justify-center w-9 h-9 rounded-lg bg-white border border-orange-100 flex-shrink-0 gap-0.5 shadow-sm">
-                                            <FileText size={11} className="text-[var(--text-orange-500)]" />
-                                            <span className="text-[8px] font-bold text-[var(--text-orange-500)] uppercase leading-none">PDF</span>
-                                        </span>
-                                        <span className="text-sm font-medium text-gray-700 flex-1 min-w-0 truncate">{doc.name}</span>
-                                        <button
-                                            onClick={() => onPreview(doc)}
-                                            className="inline-flex items-center gap-1 text-xs font-medium text-gray-500 hover:text-[var(--text-orange-500)] bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-200 px-2.5 py-1.5 rounded-lg transition-colors flex-shrink-0"
-                                        >
-                                            <Eye size={11} /> Preview
-                                        </button>
-                                        <a
-                                            href={doc.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1 text-xs font-medium text-gray-500 hover:text-[#0a0a0a] bg-white hover:bg-gray-100 border border-gray-200 px-2.5 py-1.5 rounded-lg transition-colors flex-shrink-0"
-                                        >
-                                            <Download size={11} /> Download
-                                        </a>
+                                    <li key={i} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 bg-gray-50 rounded-xl px-3 py-2.5">
+                                        <div className="flex items-center gap-3 flex-1 min-w-0">
+                                            <span className="flex flex-col items-center justify-center w-9 h-9 rounded-lg bg-white border border-orange-100 flex-shrink-0 gap-0.5 shadow-sm">
+                                                <FileText size={11} className="text-[var(--text-orange-500)]" />
+                                                <span className="text-[8px] font-bold text-[var(--text-orange-500)] uppercase leading-none">PDF</span>
+                                            </span>
+                                            <span className="text-sm font-medium text-gray-700 break-words min-w-0">{doc.name}</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 flex-shrink-0 self-end sm:self-auto">
+                                            <button
+                                                onClick={() => onPreview(doc)}
+                                                className="inline-flex items-center gap-1 text-xs font-medium text-gray-500 hover:text-[var(--text-orange-500)] bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-200 px-2.5 py-1.5 rounded-lg transition-colors"
+                                            >
+                                                <Eye size={11} /> Preview
+                                            </button>
+                                            <a
+                                                href={doc.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-1 text-xs font-medium text-gray-500 hover:text-[#0a0a0a] bg-white hover:bg-gray-100 border border-gray-200 px-2.5 py-1.5 rounded-lg transition-colors"
+                                            >
+                                                <Download size={11} /> Download
+                                            </a>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>
