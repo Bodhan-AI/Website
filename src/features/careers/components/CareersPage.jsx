@@ -8,6 +8,58 @@ const APPLY_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfTqBrU9bQVcrkCdpeRd
 
 const jobPostings = [
     {
+        title: 'VP of Research – Sovereign AI for Education',
+        experience: 'PhD + 8+ years',
+        about: "Lead Bodhan's sovereign AI research strategy across speech, language, multimodal AI, and literacy diagnostics. Bridge cutting-edge AI research with real-world classroom deployment—making solutions accessible, affordable, and impactful for underserved populations.",
+        responsibilities: [
+            'Define and execute the sovereign AI research roadmap for education, spanning ASR, TTS, LLMs, OCR, and ORF',
+            'Oversee development of education-optimized models: child-safe TTS, instruction-tuned LLMs, multilingual ASR, and ORF speech diagnostics',
+            'Establish evaluation frameworks linking model performance directly to educational outcome metrics (e.g., reading fluency, comprehension gains)',
+            'Design randomized pilots and field trials to validate measurable learning impact in real school environments',
+            'Recruit and mentor a multidisciplinary research team (AI researchers, speech scientists, linguists, cognitive scientists)',
+            'Represent Bodhan in national and international AI-for-Education initiatives and partner with ministries, NGOs, and academia',
+        ],
+        required: [
+            'PhD or equivalent in Machine Learning, Speech Processing, NLP, Education Technology, or related field',
+            '8+ years post-PhD AI/ML research experience, with 5+ years leading research teams',
+            'Proven expertise in at least one of: speech recognition, speech diagnostics, NLP/LLMs, or multimodal AI',
+            'Experience building or deploying AI systems in real-world, large-scale environments',
+            'Strong grasp of model evaluation beyond benchmark scores, especially in applied educational or social impact domains',
+        ],
+        preferred: [
+            "Experience with children's speech data or literacy research",
+            'Background in educational measurement or psychometrics',
+            'Experience in low-resource language modeling',
+            'Exposure to government or public-sector education systems',
+            'Experience designing AI for low-bandwidth or offline-first environments',
+        ],
+    },
+    {
+        title: 'Principal Scientist – Sovereign AI for Education',
+        experience: 'PhD/MS + 4+ years',
+        about: "Lead advanced research initiatives across speech, language, and multimodal AI tailored for education. Drive hands-on model innovation in ASR, ORF, LLMs, TTS, and OCR—with a focus on multilingual, low-resource, and real-world school deployments.",
+        responsibilities: [
+            "Lead research in education-optimized ASR (children's speech, dialects), ORF fluency models, instruction-tuned LLMs, child-safe TTS, and OCR for educational materials",
+            'Drive innovation in low-resource language modeling, efficient training (distillation, quantization, PEFT), and robust speech models for noisy classroom environments',
+            'Design and run experiments for model benchmarking; develop evaluation metrics connecting model outputs to literacy outcomes',
+            'Mentor research scientists, ML engineers, and applied researchers; enforce reproducibility and rigorous evaluation standards',
+            'Collaborate with Engineering and Product to productionize models and support school pilot deployments',
+        ],
+        required: [
+            "PhD or Master's with significant research experience in Machine Learning, Speech Processing, NLP, Computer Vision, or related field",
+            '4+ years post-PhD experience in AI/ML or applied research roles',
+            'Strong expertise in at least one of: speech recognition/processing, NLP/LLMs, or multimodal AI',
+            'Hands-on experience training and fine-tuning large-scale models',
+            'Strong coding proficiency in Python, PyTorch/TensorFlow, and distributed training frameworks',
+        ],
+        preferred: [
+            "Experience with children's speech data or literacy-related AI",
+            'Background in low-resource or multilingual modeling',
+            'Exposure to education technology or public-sector deployments',
+            'Experience designing evaluation metrics beyond standard benchmark datasets',
+        ],
+    },
+    {
         title: 'RAG Engineer',
         experience: '1–3 years',
         about: "Build production-ready RAG systems that leverage Bodhan AI's models for Indian language applications. Work on LangChain, LlamaIndex, and custom orchestration frameworks.",
