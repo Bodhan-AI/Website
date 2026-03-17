@@ -14,7 +14,7 @@ const VisionMission = () => {
                 <div className="text-left">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--text-orange-400)] mb-4 md:mb-8">Vision</h2>
                     <p className="text-white text-base md:text-xl lg:text-2xl font-inter font-normal leading-normal">
-                        To build a future where every citizen learns with ease and thrives with confidence in the age of Artificial Intelligence.
+                        To build a future where every learner can learn with ease and thrive with confidence in the age of Artificial Intelligence.
                     </p>
                 </div>
                 <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative group">
@@ -32,7 +32,7 @@ const VisionMission = () => {
                 <div className="text-left order-1 lg:order-2">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--text-orange-400)] mb-4 md:mb-6">Mission</h2>
                     <p className="text-white text-base md:text-xl lg:text-2xl font-inter font-normal leading-normal">
-                        Deploy responsible, inclusive, sovereign AI tools to transform how India learns, teaches, assesses, and receives guidance across every language and every district.
+                        Bodhan-AI builds the foundational AI layer for India’s education system, enabling equitable learning through personalized practice, continuous feedback, and access to high-quality learning resources in multilingual environments.
                     </p>
                 </div>
             </div>
