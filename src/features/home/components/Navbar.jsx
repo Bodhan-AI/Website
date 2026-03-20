@@ -94,6 +94,9 @@ const Navbar = () => {
                     <motion.div variants={linkVariants}>
                         <Link to="/tenders" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium">Tenders</Link>
                     </motion.div>
+                    <motion.div variants={linkVariants}>
+                        <Link to="/partners" className="text-[var(--text-primary)]/90 hover:text-[var(--text-hover)] transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Partners</Link>
+                    </motion.div>
                 </div>
 
                 {/* Mobile Hamburger Button */}
@@ -123,6 +126,7 @@ const Navbar = () => {
                     <Link to="/careers" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Careers</Link>
                     <Link to="/contact" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Contact</Link>
                     <Link to="/tenders" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Tenders</Link>
+                    <Link to="/partners" className="text-[var(--text-primary)]/90 hover:text-orange-500 transition-colors" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Partners</Link>
                 </div>
             </motion.div>
         </motion.nav>
