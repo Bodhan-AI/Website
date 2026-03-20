@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Layers, Target, Globe, Users, Zap, Mail } from 'lucide-react';
+import { Layers, Target, Globe, Users, Zap, Mail, GraduationCap, LayoutDashboard, Server, Cpu, BookOpen, ArrowUp } from 'lucide-react';
 import Navbar from '../../home/components/Navbar';
 import Footer from '../../home/components/Footer';
 
@@ -31,118 +31,207 @@ const principles = [
     },
 ];
 
-const stackLayers = [
+// Two standalone layers + one grouped block for shared DPI Partners
+const layerGroups = [
     {
-        number: '04',
-        title: 'Implementation & Delivery',
-        focus: 'Training, Rollout, and Last-mile support.',
-        partners: 'Govt / NGOs / EdTechs (Roll-out Partners).',
-        engagement:
-            'These partners drive real-world adoption through policy integration and training. They are critical for collecting field feedback based on Bodhan\'s framework to ensure the tools meet classroom realities.',
-        accent: '#FF6B35',
-        bg: '#FFF4EE',
-        border: '#FFD5C0',
+        type: 'single',
+        layer: {
+            number: '04',
+            title: 'Implementation & Delivery',
+            icon: GraduationCap,
+            focusTags: ['Training', 'Rollout', 'Last-mile support'],
+            partnerLabel: 'Govt / NGOs / EdTechs',
+            partnerType: 'Roll-out Partners',
+            bullets: [
+                'Drive real-world adoption through policy integration, training, and roll-out at last-mile support',
+                "Collect field feedback based on Bodhan's framework to ensure tools meet classroom realities",
+            ],
+            accent: '#FF6B35',
+            rowBg: '#FFF8F5',
+        },
     },
     {
-        number: '03',
-        title: 'Application & Solution Layer',
-        focus: 'SEP / LSP Partners covering specific use-cases and verticals (Primary, Secondary, Higher Education, and Skilling).',
-        partners: 'Bodhan.AI / EdTechs (Product Partners).',
-        engagement:
-            'Product partners build end-user EdTech solutions using the underlying AI IP developed by the Center of Excellence (CoE). They contribute to the ecosystem by providing non-PII user data and technical feedback to refine core models.',
-        accent: '#F97316',
-        bg: '#FFF7ED',
-        border: '#FED7AA',
+        type: 'single',
+        layer: {
+            number: '03',
+            title: 'Application & Solution Layer',
+            icon: LayoutDashboard,
+            focusTags: ['Primary', 'Secondary', 'Higher Education', 'Skilling'],
+            partnerLabel: 'Bodhan.AI / EdTechs',
+            partnerType: 'Product Partners',
+            bullets: [
+                'Build EdTech solutions using the underlying AI IP developed by the Center of Excellence (CoE)',
+                'Provide non-PII user data along with technical and qualitative feedback to contribute to the core model',
+            ],
+            accent: '#F97316',
+            rowBg: '#FFFAF5',
+        },
     },
     {
-        number: '02',
-        title: 'AI Infrastructure Layer',
-        focus: 'Model serving, data pipelines, cloud/edge security, and robust multilingual support.',
-        partners: 'DPI Partners.',
-        engagement:
-            'We work with infrastructure specialists to ensure high-concurrency at low latency, optimizing 8B–30B parameter models for national scale.',
-        accent: '#314685',
-        bg: '#EEF2FF',
-        border: '#C7D2FE',
-    },
-    {
-        number: '01',
-        title: 'Core AI Assets & Research IP',
-        focus: 'ASR, TTS, OCR, Reasoning, and Bodhan Diagnostics.',
-        partners: 'DPI Partners Public Good Aligned / Select Partners.',
-        engagement:
-            'We collaborate with data providers and feedback partners to source quality ASR, OCR, and TTS data. This layer relies on a systemic feedback loop with NGOs and pedagogists to guide system design based on end-user needs.',
-        accent: '#1D4ED8',
-        bg: '#EFF6FF',
-        border: '#BFDBFE',
-    },
-    {
-        number: '00',
-        title: 'Foundational Research Layer',
-        focus: 'Learning Sciences, Linguistics, AI State-of-the-Art (SOTA), and India-scale equity.',
-        partners: 'DPI Partners — Research Institutions & Subject Matter Experts.',
-        engagement:
-            'Engagement at this level ensures our AI is grounded in the science of how children learn, supporting multi-constituent languages and foundational literacy.',
-        accent: '#0F172A',
-        bg: '#F1F5F9',
-        border: '#CBD5E1',
+        type: 'group',
+        groupLabel: 'DPI Partners',
+        groupPartnerLabel: 'Bodhan.AI/Data Providers/Feedback Partners',
+        groupAccent: '#314685',
+        groupBullets: [
+            'Quality ASR, OCR and TTS data for building foundational AI models',
+            'Systemic Feedback Loop: NGOs, Pedagogists who can guide us on system design based on the end-users',
+        ],
+        layers: [
+            {
+                number: '02',
+                title: 'AI Infrastructure Layer',
+                icon: Server,
+                focusTags: ['Model serving', 'Data pipelines', 'Cloud / Edge', 'Multilingual support'],
+                partnerSubLabel: null,
+                bullets: [
+                    'Ensure high-concurrency at low latency, optimizing 8B–30B parameter models for national scale',
+                ],
+                accent: '#314685',
+                rowBg: '#F5F7FF',
+            },
+            {
+                number: '01',
+                title: 'Core AI Assets & Research IP',
+                icon: Cpu,
+                focusTags: ['ASR', 'TTS', 'OCR', 'Reasoning', 'Bodhan Diagnostics'],
+                partnerSubLabel: 'Public Good Aligned / Select Partners',
+                bullets: [
+                    'Quality ASR, OCR and TTS data for building foundational AI models',
+                    'Systemic Feedback Loop: NGOs, Pedagogists who can guide us on system design based on end-users',
+                ],
+                accent: '#1D4ED8',
+                rowBg: '#F5F8FF',
+            },
+            {
+                number: '00',
+                title: 'Foundational Research Layer',
+                icon: BookOpen,
+                focusTags: ['Learning Sciences', 'Linguistics', 'AI SOTA', 'India-scale equity', 'Multilingual'],
+                partnerSubLabel: 'Research Institutions & Subject Matter Experts',
+                bullets: [
+                    'Ensure AI is grounded in the science of how children learn',
+                    'Support multi-constituent languages and foundational literacy at India scale',
+                ],
+                accent: '#0F172A',
+                rowBg: '#F8F9FA',
+            },
+        ],
     },
 ];
 
-const StackLayerCard = ({ layer, index }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-60px' }}
-        transition={{ duration: 0.45, delay: index * 0.08 }}
-        className="relative flex flex-col md:flex-row gap-0 rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition-shadow"
-        style={{ borderColor: layer.border, backgroundColor: layer.bg }}
-    >
-        {/* Layer Number Sidebar */}
-        <div
-            className="flex items-center justify-center md:w-24 py-5 md:py-0 flex-shrink-0"
-            style={{ backgroundColor: layer.accent }}
-        >
-            <div className="text-center px-4">
-                <span className="block text-white/60 text-xs font-semibold uppercase tracking-widest mb-0.5">Layer</span>
-                <span className="block text-white text-3xl md:text-4xl font-bold font-syne leading-none">{layer.number}</span>
+// Reusable upward arrow connector
+const StackArrow = () => (
+    <div className="absolute bottom-0 translate-y-1/2 z-20 flex flex-col items-center" style={{ left: '2.6rem' }}>
+        <div className="w-8 h-8 rounded-full bg-white border-2 border-gray-200 shadow-md flex items-center justify-center">
+            <ArrowUp size={16} className="text-gray-400" />
+        </div>
+    </div>
+);
+
+// Left identity panel shared by both row types
+const LayerLeftPanel = ({ layer }) => (
+    <div className="flex items-start gap-4 px-6 py-5 h-full bg-white">
+        <div className="flex-shrink-0 pt-0.5">
+            <span className="text-3xl font-bold font-syne leading-none" style={{ color: layer.accent }}>
+                {layer.number}
+            </span>
+        </div>
+        <div className="w-px self-stretch bg-gray-200 flex-shrink-0 mx-1" />
+        <div className="flex-1 min-w-0">
+            <p className="text-sm font-semibold text-[#1A1A1A] leading-snug mb-2">{layer.title}</p>
+            <div className="flex flex-wrap gap-1.5">
+                {layer.focusTags.map((tag) => (
+                    <span
+                        key={tag}
+                        className="text-xs px-2 py-0.5 rounded-full border font-medium"
+                        style={{ color: layer.accent, borderColor: layer.accent + '40', backgroundColor: layer.accent + '10' }}
+                    >
+                        {tag}
+                    </span>
+                ))}
             </div>
         </div>
+        <div
+            className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center self-center"
+            style={{ backgroundColor: layer.accent + '15', color: layer.accent }}
+        >
+            <layer.icon size={22} />
+        </div>
+    </div>
+);
 
-        {/* Content */}
-        <div className="flex-1 p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-3 mb-1">
-                <h3 className="text-xl font-semibold text-[#1A1A1A]">{layer.title}</h3>
+// Single-layer row (layers 04 & 03)
+const SingleRow = ({ group, animIndex, showArrowBelow }) => {
+    const { layer } = group;
+    return (
+        <motion.div
+            initial={{ opacity: 0, x: -16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.4, delay: animIndex * 0.07 }}
+            className="relative flex border-b border-gray-100"
+        >
+            <div className="w-2/5 border-r border-gray-100">
+                <LayerLeftPanel layer={layer} />
             </div>
-
-            <div>
-                <span
-                    className="text-xs font-semibold uppercase tracking-wide mb-2 block"
-                    style={{ color: layer.accent }}
-                >
-                    Focus
-                </span>
-                <p className="text-sm text-gray-600 leading-relaxed">{layer.focus}</p>
+            <div className="flex-1 px-6 py-5 bg-white">
+                <p className="text-sm font-semibold mb-2.5" style={{ color: layer.accent }}>
+                    {layer.partnerLabel}
+                    {layer.partnerType && (
+                        <span className="font-normal text-gray-500">: {layer.partnerType}</span>
+                    )}
+                </p>
+                <ul className="space-y-1.5">
+                    {layer.bullets.map((b, i) => (
+                        <li key={i} className="flex gap-2 text-sm text-gray-600 leading-relaxed">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: layer.accent }} />
+                            {b}
+                        </li>
+                    ))}
+                </ul>
             </div>
+            {showArrowBelow && <StackArrow />}
+        </motion.div>
+    );
+};
 
-            <div>
-                <span
-                    className="text-xs font-semibold uppercase tracking-wide mb-2 block"
-                    style={{ color: layer.accent }}
+// Grouped rows block (layers 02, 01, 00 share "DPI Partners" with bracket)
+const GroupedRows = ({ group, startAnimIndex }) => (
+    <motion.div
+        initial={{ opacity: 0, x: -16 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: '-40px' }}
+        transition={{ duration: 0.4, delay: startAnimIndex * 0.07 }}
+        className="flex"
+    >
+        {/* Left: stacked layer identities */}
+        <div className="w-2/5 border-r border-gray-100 flex flex-col">
+            {group.layers.map((layer, i) => (
+                <div
+                    key={layer.number}
+                    className={`relative ${i < group.layers.length - 1 ? 'border-b border-gray-100' : ''}`}
                 >
-                    Partners
-                </span>
-                <p className="text-sm text-gray-600 leading-relaxed">{layer.partners}</p>
-            </div>
+                    <LayerLeftPanel layer={layer} />
+                    {i < group.layers.length - 1 && <StackArrow />}
+                </div>
+            ))}
+        </div>
 
-            <div>
-                <span
-                    className="text-xs font-semibold uppercase tracking-wide mb-2 block"
-                    style={{ color: layer.accent }}
-                >
-                    Engagement
-                </span>
-                <p className="text-sm text-gray-600 leading-relaxed">{layer.engagement}</p>
+        {/* Right: grouped content */}
+        <div className="flex-1 flex items-stretch bg-white">
+            {/* Content */}
+            <div className="flex-1 px-4 py-5 flex flex-col justify-center">
+                <p className="text-sm font-bold mb-3" style={{ color: group.groupAccent }}>
+                    {group.groupPartnerLabel}: {group.groupLabel}
+                </p>
+                <ul className="space-y-1.5">
+                    {group.groupBullets.map((b, i) => (
+                        <li key={i} className="flex gap-2 text-sm text-gray-600 leading-relaxed">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: group.groupAccent }} />
+                            {b}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     </motion.div>
@@ -266,11 +355,42 @@ const PartnersPage = () => {
                         </p>
                     </motion.div>
 
-                    {/* Stack Layers */}
-                    <div className="flex flex-col gap-4">
-                        {stackLayers.map((layer, index) => (
-                            <StackLayerCard key={layer.number} layer={layer} index={index} />
-                        ))}
+                    {/* Column headers */}
+                    <div className="flex mb-0 px-6 pb-2">
+                        <div className="w-2/5">
+                            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Layer / Focus</span>
+                        </div>
+                        <div className="flex-1 hidden md:block">
+                            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">Partners &amp; Engagement</span>
+                        </div>
+                    </div>
+
+                    {/* Stack — unified card */}
+                    <div className="rounded-3xl border border-gray-100 overflow-hidden shadow-md">
+                        {layerGroups.map((group, gi) => {
+                            const animIndex = layerGroups.slice(0, gi).reduce(
+                                (acc, g) => acc + (g.type === 'group' ? g.layers.length : 1), 0
+                            );
+                            const isLastGroup = gi === layerGroups.length - 1;
+
+                            if (group.type === 'single') {
+                                return (
+                                    <SingleRow
+                                        key={group.layer.number}
+                                        group={group}
+                                        animIndex={animIndex}
+                                        showArrowBelow={!isLastGroup}
+                                    />
+                                );
+                            }
+                            return (
+                                <GroupedRows
+                                    key={group.groupLabel}
+                                    group={group}
+                                    startAnimIndex={animIndex}
+                                />
+                            );
+                        })}
                     </div>
 
                     {/* Foundation label */}
@@ -279,7 +399,7 @@ const PartnersPage = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-6 flex items-center justify-center gap-3 text-sm text-gray-400"
+                        className="mt-4 flex items-center justify-center gap-3"
                     >
                         <div className="flex-1 h-px bg-gray-200" />
                         <span className="px-4 py-1.5 rounded-full bg-gray-100 border border-gray-200 text-xs font-medium text-gray-500 uppercase tracking-wide">
