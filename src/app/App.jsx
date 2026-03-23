@@ -7,6 +7,7 @@ import CareersPage from '../features/careers/components/CareersPage'
 import ContactPage from '../features/contact/components/ContactPage'
 import TendersPage from '../features/tenders/components/TendersPage'
 import TenderApplyPage from '../features/tenders/components/TenderApplyPage'
+import PartnersPage from '../features/partners/components/PartnersPage'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/tenders" element={<TendersPage />} />
       <Route path="/tenders/apply/:tenderId" element={<TenderApplyPage />} />
+      <Route path="/partners" element={<PartnersPage />} />
     </Routes>
   )
 }
