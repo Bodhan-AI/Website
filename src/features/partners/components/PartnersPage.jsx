@@ -45,7 +45,7 @@ const layerGroups = [
             title: 'Implementation & Delivery',
             icon: iconTeacher,
             focusTags: ['Training', 'Rollout', 'Last-mile support'],
-            partnerLabel: 'Govt / NGOs / EdTechs',
+            partnerLabel: 'Govt | NGOs | EdTechs',
             partnerType: 'Roll-out Partners',
             bullets: [
                 'Drive real world adoption through policy, training, roll-out and last-mile support',
@@ -62,7 +62,7 @@ const layerGroups = [
             title: 'Application & Solution Layer',
             icon: iconMobileApp,
             focusTags: ['SEP / LSP Partners (Use-case & vertical)', 'Primary', 'Secondary', 'Higher', 'Skilling'],
-            partnerLabel: 'Bodhan.AI / EdTechs',
+            partnerLabel: 'Bodhan.AI | EdTechs',
             partnerType: 'Product Partners',
             bullets: [
                 'Build EdTech solutions using the underlying AI IP developed by the CoE.',
@@ -75,7 +75,7 @@ const layerGroups = [
     {
         type: 'group',
         groupLabel: 'DPI Partners',
-        groupPartnerLabel: 'Bodhan.AI/Data Providers/Feedback Partners',
+        groupPartnerLabel: 'Bodhan.AI | Data Providers | Feedback Partners',
         groupAccent: '#314685',
         groupBullets: [
             'Quality ASR, OCR and TTS data for building foundational AI models.',
