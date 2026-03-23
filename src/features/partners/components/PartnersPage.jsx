@@ -155,30 +155,30 @@ const ArrowConnector = ({ animIndex }) => (
         transition={{ duration: 0.3, delay: animIndex * 0.07 + 0.2 }}
         className="flex h-16"
     >
-        <div className="w-5/12 flex items-center justify-center">
+        <div className="w-full md:w-5/12 flex items-center justify-center">
             <SolidArrow />
         </div>
-        <div className="flex-1" />
+        <div className="hidden md:flex flex-1" />
     </motion.div>
 );
 
 // Left identity panel — centered number | divider | title + pills | icon
 const LayerLeftPanel = ({ layer }) => (
-    <div className="flex items-center gap-4 px-5 py-5 min-h-[120px] h-full flex-1">
+    <div className="flex items-center gap-3 md:gap-4 px-3 py-4 md:px-5 md:py-5 min-h-[100px] md:min-h-[120px] h-full flex-1">
         <span
-            className="text-4xl font-bold font-syne w-14 text-center flex-shrink-0 leading-none"
+            className="text-2xl md:text-4xl font-bold font-syne w-10 md:w-14 text-center flex-shrink-0 leading-none"
             style={{ color: layer.accent }}
         >
             {layer.number}
         </span>
         <div className="w-px self-stretch bg-gray-200 flex-shrink-0" />
         <div className="flex-1 min-w-0">
-            <p className="text-base font-semibold text-gray-800 leading-snug mb-2">{layer.title}</p>
-            <p className="text-sm text-gray-500 leading-relaxed">
+            <p className="text-sm md:text-base font-semibold text-gray-800 leading-snug mb-1.5">{layer.title}</p>
+            <p className="text-xs md:text-sm text-gray-500 leading-relaxed">
                 {layer.focusTags.join(' | ')}
             </p>
         </div>
-        <img src={layer.icon} alt="" className="flex-shrink-0 w-16 h-16 object-contain" />
+        <img src={layer.icon} alt="" className="flex-shrink-0 w-10 h-10 md:w-16 md:h-16 object-contain" />
     </div>
 );
 
@@ -191,11 +191,11 @@ const SingleRow = ({ group, animIndex }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.4, delay: animIndex * 0.07 }}
-            className="flex gap-4 items-stretch"
+            className="flex flex-col md:flex-row gap-4 md:items-stretch"
         >
             {/* Left card */}
             <div
-                className="w-5/12 shrink-0 rounded-2xl overflow-hidden flex flex-col"
+                className="w-full md:w-5/12 shrink-0 rounded-2xl overflow-hidden flex flex-col"
                 style={{
                     background: `linear-gradient(160deg, #ffffff 0%, ${layer.accent}18 100%)`,
                     boxShadow: '0 8px 24px rgba(0,0,0,0.09), 0 2px 6px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.9)',
@@ -205,13 +205,13 @@ const SingleRow = ({ group, animIndex }) => {
             >
                 <LayerLeftPanel layer={layer} />
             </div>
-            <CurlyBrace color={layer.accent} />
+            <div className="hidden md:flex md:self-stretch"><CurlyBrace color={layer.accent} /></div>
             {/* Right content — plain text, no box */}
-            <div className="flex-1 px-4 py-2 flex flex-col justify-center">
+            <div className="flex-1 px-2 md:px-4 py-2 flex flex-col justify-center">
                 {layer.partnerType && (
-                    <p className="text-xl font-bold text-gray-900 mb-1">{layer.partnerType}</p>
+                    <p className="text-lg md:text-xl font-bold text-gray-900 mb-1">{layer.partnerType}</p>
                 )}
-                <p className="text-sm text-gray-500 mb-3">{layer.partnerLabel}</p>
+                <p className="text-xs md:text-sm text-gray-500 mb-3">{layer.partnerLabel}</p>
                 <ul className="space-y-1.5">
                     {layer.bullets.map((b, i) => (
                         <li key={i} className="flex gap-2 text-sm text-gray-700 leading-relaxed">
@@ -233,10 +233,10 @@ const GroupedRows = ({ group, startAnimIndex }) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
         transition={{ duration: 0.4, delay: startAnimIndex * 0.07 }}
-        className="flex gap-4 items-stretch"
+        className="flex flex-col md:flex-row gap-4 md:items-stretch"
     >
         {/* Left: individual layer cards with arrows between them */}
-        <div className="w-5/12 shrink-0 flex flex-col">
+        <div className="w-full md:w-5/12 shrink-0 flex flex-col">
             {group.layers.map((layer, i) => (
                 <React.Fragment key={layer.number}>
                     <div
@@ -259,11 +259,11 @@ const GroupedRows = ({ group, startAnimIndex }) => (
             ))}
         </div>
 
-        <CurlyBrace color={group.groupAccent} />
+        <div className="hidden md:flex md:self-stretch"><CurlyBrace color={group.groupAccent} /></div>
         {/* Right: plain text, no box */}
-        <div className="flex-1 px-4 py-2 flex flex-col justify-center">
-            <p className="text-xl font-bold text-gray-900 mb-1">{group.groupLabel}</p>
-            <p className="text-sm text-gray-500 mb-3">{group.groupPartnerLabel}</p>
+        <div className="flex-1 px-2 md:px-4 py-2 flex flex-col justify-center">
+            <p className="text-lg md:text-xl font-bold text-gray-900 mb-1">{group.groupLabel}</p>
+            <p className="text-xs md:text-sm text-gray-500 mb-3">{group.groupPartnerLabel}</p>
             <ul className="space-y-2">
                 {group.groupBullets.map((b, i) => (
                     <li key={i} className="flex gap-2 text-sm text-gray-700 leading-relaxed">
