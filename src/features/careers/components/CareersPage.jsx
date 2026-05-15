@@ -8,7 +8,7 @@ const APPLY_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfTqBrU9bQVcrkCdpeRd
 
 const jobPostings = [
     {
-        title: 'Research Engineer',
+        title: 'Research Engineer (Junior, Senior, Principal)',
         experience: 'B.Tech/M.Tech',
         about: "Bodhan AI is looking for exceptional Research Engineers to push the boundaries of sovereign AI for India. You will play a critical role in executing research goals, driving experimentation, building robust infrastructure and efficient model training pipelines. Contribute hands-on to model innovation in ASR, ORF, LLMs, TTS, and OCR—with a focus on multilingual, multi-modal, low-resource, and real-world school deployments.",
         responsibilities: [
@@ -33,7 +33,7 @@ const jobPostings = [
         ],
     },
     {
-        title: 'Research Scientist',
+        title: 'Research Scientist (Junior, Senior, Principal)',
         experience: 'PhD/MS + 2–6+ years',
         about: "Bodhan AI is looking for exceptional Research Scientists to push the boundaries of sovereign AI for India. You will be responsible for driving research initiatives in speech, language, and vision AI tailored for education—with a focus on multilingual, multi-modal, low-resource, and real-world school deployments.",
         responsibilities: [
